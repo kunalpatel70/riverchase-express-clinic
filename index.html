@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Riverchase Express Clinic</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <meta name="theme-color" content="#0b3954">
+    <meta name="description"
+        content="Riverchase Express Clinic offers personalized, compassionate healthcare focusing on primary and minute care. Walk-ins welcome. Conveniently located in Hoover, AL.">
+    <meta name="keywords"
+        content="Riverchase Express Clinic, primary care, acute care, chronic disease management, wellness services, Hoover AL healthcare, personalized care, walk-in clinic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <style>
+        body.theme-healowaware {
+            font-family: "Montserrat", sans-serif;
+            background-color: #25084a;
+        }
+
+        :root {
+            --healowaware-font-family: "Montserrat", sans-serif;
+        }
+
+        .theme-healowaware-root {
+            background-color: #f3f8ff;
+            color: inherit;
+            font-family: var(--healowaware-font-family, 'Inter', sans-serif);
+        }
+
+        .theme-healowaware-root .material-icons {
+            font-family: 'Material Icons';
+        }
+
+        .theme-healowaware-root .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+        }
+
+        .theme-healowaware-root .material-symbols-rounded {
+            font-family: 'Material Symbols Rounded';
+        }
+
+        .theme-healowaware-root .material-symbols-sharp {
+            font-family: 'Material Symbols Sharp';
+        }
+
+        .theme-healowaware-body {
+            background-color: #f3f8ff;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap-4.0.0.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--<link rel="stylesheet" href="assets/css/specific-styles.css">-->
+    <!--<link rel="stylesheet" href="assets/css/tv-styles.css">-->
+    <link rel="stylesheet" href="assets/css/healowaware.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="assets/js/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/js/owlcarousel/assets/owl.theme.default.min.css">
+
+    <style id="rcec-design-system">
+        /* ============================================================
+           Riverchase Express Clinic — site-wide design system
+           ============================================================ */
+
+        /* Neutral section base — applied to every redesigned section */
+        .rcec-section {
+            font-family: "Montserrat", sans-serif;
+            padding: 5rem 0;
+            position: relative;
+        }
+        .rcec-section--cream { background: #fbf9f4; }
+        .rcec-section--white { background: #ffffff; }
+        .rcec-section--ink   { background: #0d2e4f; color: #ffffff; }
+
+        /* Section header pattern: eyebrow → title → lead */
+        .rcec-eyebrow {
+            display: inline-block;
+            color: #468cc5;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin: 0 0 0.85rem;
+        }
+        .rcec-section--ink .rcec-eyebrow { color: #cfe3f5; }
+
+        .rcec-title {
+            color: #0d2e4f;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+            line-height: 1.15;
+            letter-spacing: -0.015em;
+            margin: 0 0 1rem;
+            max-width: 22ch;
+        }
+        .rcec-section--ink .rcec-title { color: #ffffff; }
+        .rcec-title--sm { font-size: clamp(1.25rem, 1.8vw, 1.5rem); margin-bottom: 0.6rem; max-width: none; }
+
+        .rcec-lead {
+            color: #4b5563;
+            font-size: 1.05rem;
+            line-height: 1.65;
+            max-width: 62ch;
+            margin: 0 0 2.5rem;
+        }
+        .rcec-section--ink .rcec-lead { color: rgba(255,255,255,0.85); }
+
+        /* Card primitives */
+        .rcec-card {
+            background: #ffffff;
+            border: 1px solid rgba(13, 46, 79, 0.08);
+            border-radius: 14px;
+            padding: 1.75rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .rcec-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px -18px rgba(13, 46, 79, 0.18);
+            border-color: rgba(70, 140, 197, 0.25);
+        }
+        .rcec-card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            background: rgba(70, 140, 197, 0.10);
+            color: #468cc5;
+            margin-bottom: 1rem;
+        }
+        .rcec-card-icon .material-icons { font-size: 22px; }
+        .rcec-card h5 {
+            color: #0d2e4f;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin: 0 0 0.5rem;
+        }
+        .rcec-card p {
+            color: #4b5563;
+            font-size: 0.93rem;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* Chip row */
+        .rcec-chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .rcec-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 1rem;
+            background: #ffffff;
+            border: 1px solid rgba(70, 140, 197, 0.25);
+            border-radius: 999px;
+            color: #0d2e4f;
+            font-weight: 500;
+            font-size: 0.92rem;
+        }
+        .rcec-chip .material-icons {
+            font-size: 16px;
+            color: #70b69b;
+        }
+
+        /* Section divider — thin hairline between flowing sections */
+        .rcec-divider {
+            height: 1px;
+            background: rgba(13, 46, 79, 0.07);
+            border: 0; margin: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .rcec-section { padding: 3.5rem 0; }
+            .rcec-title { max-width: 100%; }
+        }
+    </style>
+</head>
+
+<body class="theme-healowaware">
+    <main class="main" id="top">
+        <div class="theme-healowaware-root">
+            <style>
+                /* Editorial nav — Riverchase Express Clinic */
+                #primary-nav { transition: box-shadow 0.25s ease, background-color 0.25s ease; }
+                #primary-nav.is-scrolled { box-shadow: 0 7px 14px 0 rgba(15,23,42,0.06), 0 3px 6px 0 rgba(15,23,42,0.04); }
+
+                #primary-nav .navbar-brand img { max-height: 84px; transition: max-height 0.25s ease; }
+                #primary-nav.is-scrolled .navbar-brand img { max-height: 64px; }
+
+                #primary-nav .nav-link {
+                    position: relative;
+                    color: #2b2d42 !important;
+                    font-weight: 500;
+                    font-size: 0.95rem;
+                    letter-spacing: 0.01em;
+                    padding: 0.5rem 0 !important;
+                    margin: 0 1rem;
+                    transition: color 0.2s ease;
+                }
+                #primary-nav .nav-link::after {
+                    content: "";
+                    position: absolute;
+                    left: 0; right: 0; bottom: 0;
+                    height: 2px;
+                    background: #468cc5;
+                    transform: scaleX(0);
+                    transform-origin: left center;
+                    transition: transform 0.25s ease;
+                }
+                #primary-nav .nav-link:hover,
+                #primary-nav .nav-link:focus,
+                #primary-nav .nav-link.is-active { color: #0d2e4f !important; }
+                #primary-nav .nav-link:hover::after,
+                #primary-nav .nav-link:focus::after,
+                #primary-nav .nav-link.is-active::after { transform: scaleX(1); }
+
+                /* CTA cluster */
+                #primary-nav .nav-cta { display: flex; align-items: center; gap: 0.75rem; margin-left: 1.25rem; }
+                #primary-nav .nav-call {
+                    display: inline-flex; align-items: center; gap: 0.4rem;
+                    color: #2b2d42; text-decoration: none; font-weight: 600; font-size: 0.93rem;
+                    padding: 0.4rem 0.5rem; border-radius: 6px;
+                    transition: color 0.2s ease, background 0.2s ease;
+                }
+                #primary-nav .nav-call:hover { color: #0d2e4f; background: rgba(70,140,197,0.08); }
+                #primary-nav .nav-call .material-icons { font-size: 18px; color: #468cc5; }
+
+                #primary-nav .btn-book,
+                #primary-nav .btn-portal {
+                    display: inline-flex; align-items: center; gap: 0.35rem;
+                    padding: 0.5rem 1.15rem;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 0.9rem; font-weight: 600;
+                    border-radius: 999px;
+                    border: 1.5px solid transparent;
+                    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+                    text-decoration: none;
+                    line-height: 1;
+                }
+                #primary-nav .btn-book {
+                    background: #70b69b; color: #ffffff; border-color: #70b69b;
+                }
+                #primary-nav .btn-book:hover {
+                    background: #5fa389; border-color: #5fa389; color: #ffffff;
+                    box-shadow: 0 6px 16px -8px rgba(112,182,155,0.55);
+                    transform: translateY(-1px);
+                }
+                #primary-nav .btn-portal {
+                    background: transparent; color: #468cc5; border-color: #468cc5;
+                }
+                #primary-nav .btn-portal:hover {
+                    background: #468cc5; color: #ffffff; border-color: #468cc5;
+                    box-shadow: 0 6px 16px -8px rgba(70,140,197,0.55);
+                    transform: translateY(-1px);
+                }
+                #primary-nav .btn-portal .material-icons { font-size: 16px; }
+
+                /* Mobile collapse */
+                @media (max-width: 991.98px) {
+                    #primary-nav .navbar-collapse {
+                        margin-top: 0.75rem;
+                        padding-top: 0.75rem;
+                        border-top: 1px solid rgba(15,23,42,0.08);
+                    }
+                    #primary-nav .nav-link { margin: 0; padding: 0.65rem 0 !important; }
+                    #primary-nav .nav-link::after { display: none; }
+                    #primary-nav .nav-cta { margin: 0.75rem 0 0; flex-wrap: wrap; }
+                }
+
+                /* Make anchor jumps not hide under fixed nav */
+                html { scroll-padding-top: 110px; }
+                @media (max-width: 991.98px) { html { scroll-padding-top: 90px; } }
+            </style>
+
+            <div id="primary-nav" class="container-fluid fixed-top"
+                style="background-color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif;">
+                <nav id="navbar-primary" class="navbar navbar-expand-lg navbar-light container px-0">
+                    <a class="navbar-brand" href="#top" aria-label="Riverchase Express Clinic — home">
+                        <img src="assets/img/logo.png" alt="Riverchase Express Clinic">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-toggle="collapse"
+                        data-bs-target="#healowaware-navbar-2120" data-target="#healowaware-navbar-2120"
+                        aria-controls="healowaware-navbar-2120" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="healowaware-navbar-2120">
+                        <ul id="header-navbar" class="navbar-nav ms-auto align-items-lg-center mb-0">
+                            <li class="nav-item"><a class="nav-link" href="#location-details">Location</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services-bx">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#patient-tools">Patient Tools</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                        </ul>
+
+                        <div class="nav-cta">
+                            <a class="nav-call" href="tel:2055366019" aria-label="Call 205-536-6019">
+                                <i class="material-icons" aria-hidden="true">call</i>
+                                <span>205-536-6019</span>
+                            </a>
+                            <a class="btn-book" href="#">Book Visit</a>
+                            <a class="btn-portal" href="https://mycw257.ecwcloud.com/portal30935/jsp/login.jsp"
+                               target="_blank" rel="noopener noreferrer">
+                                <i class="material-icons" aria-hidden="true">lock_open</i>
+                                Patient Portal
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <script>
+                (function () {
+                    var nav = document.getElementById('primary-nav');
+                    if (!nav) return;
+                    var onScroll = function () {
+                        if (window.scrollY > 8) nav.classList.add('is-scrolled');
+                        else nav.classList.remove('is-scrolled');
+                    };
+                    window.addEventListener('scroll', onScroll, { passive: true });
+                    onScroll();
+
+                    // Active-section highlight
+                    var links = Array.prototype.slice.call(nav.querySelectorAll('.nav-link[href^="#"]'));
+                    var sections = links
+                        .map(function (a) {
+                            var id = a.getAttribute('href').slice(1);
+                            var el = document.getElementById(id);
+                            return el ? { link: a, el: el } : null;
+                        })
+                        .filter(Boolean);
+                    if (!sections.length || !('IntersectionObserver' in window)) return;
+
+                    var observer = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            var match = sections.find(function (s) { return s.el === entry.target; });
+                            if (!match) return;
+                            if (entry.isIntersecting) {
+                                links.forEach(function (l) { l.classList.remove('is-active'); });
+                                match.link.classList.add('is-active');
+                            }
+                        });
+                    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+                    sections.forEach(function (s) { observer.observe(s.el); });
+                })();
+            </script>
+
+            <style>
+                .healowaware-hero .healowaware-hero-illustration {
+                    max-width: 560px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .healowaware-hero .healowaware-hero-illustration img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 1.25rem;
+                }
+
+                @media (max-width: 991px) {
+                    .healowaware-hero .healowaware-hero-illustration {
+                        max-width: 420px;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .healowaware-hero .healowaware-hero-illustration {
+                        max-width: 260px;
+                    }
+
+                    .healowaware-hero .healowaware-hero-illustration img {
+                        height: auto !important;
+                        max-height: 280px;
+                        object-fit: contain;
+                    }
+                }
+            </style>
+
+            <style>
+                /* Editorial hero — Riverchase Express Clinic */
+                #hero-section {
+                    position: relative;
+                    min-height: 62vh;
+                    display: flex;
+                    align-items: center;
+                    background-color: #0d2e4f;
+                    background-image: url(assets/img/20260521_083841.webp);
+                    background-size: cover;
+                    background-position: 70% 100%;
+                    background-repeat: no-repeat;
+                    overflow: hidden;
+                    font-family: "Montserrat", sans-serif;
+                }
+                #hero-section::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(95deg,
+                        rgba(13,46,79,0.88) 0%,
+                        rgba(13,46,79,0.78) 38%,
+                        rgba(13,46,79,0.42) 65%,
+                        rgba(13,46,79,0.18) 100%);
+                    pointer-events: none;
+                }
+                #hero-section .hero-inner {
+                    position: relative;
+                    z-index: 1;
+                    padding: 9rem 0 2.5rem;
+                    width: 100%;
+                }
+                #hero-section .hero-eyebrow {
+                    color: #cfe3f5;
+                    font-size: 0.78rem;
+                    font-weight: 600;
+                    letter-spacing: 0.18em;
+                    text-transform: uppercase;
+                    margin: 0 0 1.25rem;
+                }
+                #hero-section .hero-status {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.55rem;
+                    padding: 0.4rem 0.95rem;
+                    background: rgba(255,255,255,0.12);
+                    border: 1px solid rgba(255,255,255,0.22);
+                    border-radius: 999px;
+                    color: #ffffff;
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                    margin-bottom: 1.75rem;
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                }
+                #hero-section .hero-status .dot {
+                    width: 8px; height: 8px; border-radius: 50%;
+                    background: #70b69b;
+                    box-shadow: 0 0 0 4px rgba(112,182,155,0.25);
+                    animation: heroPulse 2.4s ease-in-out infinite;
+                }
+                #hero-section .hero-status.is-closed .dot {
+                    background: #e6a23c;
+                    box-shadow: 0 0 0 4px rgba(230,162,60,0.22);
+                    animation: none;
+                }
+                @keyframes heroPulse {
+                    0%, 100% { box-shadow: 0 0 0 4px rgba(112,182,155,0.25); }
+                    50%      { box-shadow: 0 0 0 7px rgba(112,182,155,0.05); }
+                }
+                #hero-section h1.hero-title {
+                    color: #ffffff;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 600;
+                    font-size: clamp(2rem, 4.6vw, 3.5rem);
+                    line-height: 1.08;
+                    letter-spacing: -0.015em;
+                    margin: 0 0 1.25rem;
+                    max-width: 18ch;
+                }
+                #hero-section .hero-sub {
+                    color: rgba(255,255,255,0.92);
+                    font-size: clamp(1rem, 1.25vw, 1.15rem);
+                    line-height: 1.6;
+                    max-width: 54ch;
+                    margin: 0 0 2.25rem;
+                    font-weight: 400;
+                }
+                #hero-section .hero-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+                #hero-section .hero-btn {
+                    display: inline-flex; align-items: center; gap: 0.4rem;
+                    padding: 0.8rem 1.5rem;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 0.95rem; font-weight: 600;
+                    border-radius: 999px;
+                    border: 1.5px solid transparent;
+                    text-decoration: none; line-height: 1;
+                    transition: background-color 0.2s ease, color 0.2s ease,
+                                transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+                }
+                #hero-section .hero-btn-primary {
+                    background: #70b69b; color: #ffffff; border-color: #70b69b;
+                }
+                #hero-section .hero-btn-primary:hover {
+                    background: #5fa389; border-color: #5fa389; color: #ffffff;
+                    box-shadow: 0 12px 26px -10px rgba(112,182,155,0.55);
+                    transform: translateY(-1px);
+                }
+                #hero-section .hero-btn-secondary {
+                    background: rgba(255,255,255,0.08);
+                    color: #ffffff;
+                    border-color: rgba(255,255,255,0.55);
+                    backdrop-filter: blur(6px);
+                    -webkit-backdrop-filter: blur(6px);
+                }
+                #hero-section .hero-btn-secondary:hover {
+                    background: #ffffff; color: #0d2e4f; border-color: #ffffff;
+                    transform: translateY(-1px);
+                }
+                #hero-section .hero-meta {
+                    margin-top: 2.5rem;
+                    color: rgba(255,255,255,0.72);
+                    font-size: 0.85rem;
+                    letter-spacing: 0.02em;
+                }
+                #hero-section .hero-meta strong { color: #ffffff; font-weight: 600; }
+                #hero-section .hero-meta .dot-sep {
+                    display: inline-block; margin: 0 0.6rem;
+                    color: rgba(255,255,255,0.4);
+                }
+
+                @media (max-width: 991.98px) {
+                    #hero-section {
+                        min-height: auto;
+                        background-position: 50% 100%;
+                    }
+                    #hero-section::before {
+                        background: linear-gradient(180deg,
+                            rgba(13,46,79,0.88) 0%,
+                            rgba(13,46,79,0.78) 60%,
+                            rgba(13,46,79,0.65) 100%);
+                    }
+                    #hero-section .hero-inner { padding: 6.5rem 0 2rem; }
+                    #hero-section h1.hero-title { max-width: 100%; }
+                }
+            </style>
+
+            <section id="hero-section" class="container-fluid">
+                <div class="container hero-inner">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-11">
+                            <p class="hero-eyebrow">Niki Patel, FNP-BC &nbsp;·&nbsp; Hoover, AL</p>
+
+                            <div class="hero-status" id="hero-status" role="status" aria-live="polite">
+                                <span class="dot" aria-hidden="true"></span>
+                                <span class="hero-status-text">Checking hours…</span>
+                            </div>
+
+                            <h1 class="hero-title">The neighborhood clinic, without the wait.</h1>
+
+                            <p class="hero-sub">
+                                Walk in for a sore throat. Come back for your blood pressure check.
+                                We're open six days a week — and we'll know your name.
+                            </p>
+
+                            <div class="hero-cta">
+                                <a class="hero-btn hero-btn-primary" href="#">Schedule a Visit</a>
+                                <a class="hero-btn hero-btn-secondary"
+                                   href="https://mycw257.ecwcloud.com/portal30935/jsp/login.jsp"
+                                   target="_blank" rel="noopener noreferrer">Patient Portal Login</a>
+                            </div>
+
+                            <p class="hero-meta">
+                                <strong>3075 John Hawkins Pkwy, Suite G</strong>
+                                <span class="dot-sep">·</span>
+                                <a href="tel:2055366019" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.35);">205-536-6019</a>
+                                <span class="dot-sep">·</span>
+                                Mon–Sat, 9 AM–2 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                (function () {
+                    var el = document.getElementById('hero-status');
+                    if (!el) return;
+                    var textEl = el.querySelector('.hero-status-text');
+
+                    function nowInChicago() {
+                        var fmt = new Intl.DateTimeFormat('en-US', {
+                            timeZone: 'America/Chicago',
+                            weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+                        });
+                        var parts = fmt.formatToParts(new Date());
+                        var get = function (t) {
+                            var p = parts.find(function (x) { return x.type === t; });
+                            return p ? p.value : '';
+                        };
+                        var dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+                        var day = dayMap[get('weekday')];
+                        var hour = parseInt(get('hour'), 10);
+                        var minute = parseInt(get('minute'), 10);
+                        if (hour === 24) hour = 0;
+                        return { day: day, mins: hour * 60 + minute };
+                    }
+
+                    function nextOpenDay(day) {
+                        if (day === 6 || day === 0) return 1; // Sat or Sun -> Mon
+                        return day + 1;                       // Mon-Fri -> next day
+                    }
+
+                    var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+                    var t = nowInChicago();
+                    var openMin = 9 * 60;
+                    var closeMin = 14 * 60;
+
+                    var isOpenDay = t.day >= 1 && t.day <= 6;
+                    var isOpenNow = isOpenDay && t.mins >= openMin && t.mins < closeMin;
+
+                    if (isOpenNow) {
+                        el.classList.remove('is-closed');
+                        textEl.textContent = 'Open today until 2 PM';
+                    } else {
+                        el.classList.add('is-closed');
+                        if (isOpenDay && t.mins < openMin) {
+                            textEl.textContent = 'Closed — opens today at 9 AM';
+                        } else {
+                            var nd = nextOpenDay(t.day);
+                            var isImmediateTomorrow = ((t.day + 1) % 7) === nd;
+                            var label = isImmediateTomorrow ? 'tomorrow' : dayNames[nd];
+                            textEl.textContent = 'Closed — opens ' + label + ' at 9 AM';
+                        }
+                    }
+                })();
+            </script>
+            <style>
+                /* Compliance / emergency strip */
+                #imp-notice {
+                    background: #fff8ed;
+                    border-top: 1px solid rgba(217, 119, 6, 0.22);
+                    border-bottom: 1px solid rgba(217, 119, 6, 0.22);
+                    border-left: 3px solid #d97706;
+                    font-family: "Montserrat", sans-serif;
+                }
+                #imp-notice .imp-row {
+                    display: flex; align-items: center; gap: 0.65rem;
+                    padding: 0.65rem 0;
+                    color: #7c4a03;
+                    font-size: 0.85rem;
+                    line-height: 1.45;
+                    flex-wrap: wrap;
+                }
+                #imp-notice .imp-row .material-icons {
+                    color: #d97706; font-size: 18px; flex-shrink: 0;
+                }
+                #imp-notice .imp-row strong { color: #5a3402; font-weight: 600; }
+                #imp-notice .imp-row a {
+                    color: #5a3402; font-weight: 600; text-decoration: none;
+                    border-bottom: 1px solid rgba(217, 119, 6, 0.45);
+                    transition: border-color 0.2s ease, color 0.2s ease;
+                }
+                #imp-notice .imp-row a:hover { color: #d97706; border-color: #d97706; }
+                #imp-notice .imp-sep {
+                    color: rgba(124, 74, 3, 0.4);
+                    margin: 0 0.15rem;
+                }
+                @media (max-width: 575.98px) {
+                    #imp-notice .imp-sep { display: none; }
+                    #imp-notice .imp-row { gap: 0.4rem; }
+                }
+            </style>
+
+            <div id="imp-notice" class="container-fluid">
+                <div class="container">
+                    <div class="imp-row" role="note">
+                        <i class="material-icons" aria-hidden="true">warning_amber</i>
+                        <span>
+                            <strong>Medical emergency?</strong>
+                            Call <a href="tel:911">911</a> immediately.
+                        </span>
+                        <span class="imp-sep">·</span>
+                        <span>Patient portal messages are for non-urgent matters only.</span>
+                    </div>
+                </div>
+            </div>
+            <section class="container-fluid py-5  pt-5" id="columnblock-2123"
+                style="background-color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif; background: #ffffff; color: #2b2d42">
+                <div class="container">
+                    <div class="row g-2" style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif">
+                        <div class="col-md-7 col-12  p-1">
+                            <section class="pt-0 pe-2"
+                                id="textparagraph-c4ad9b14-8a3e-4a91-ae27-c53b56797cfa"
+                                style="background: transparent; color: #212529; font-family: &quot;Montserrat&quot;, sans-serif;">
+                                <p class="rcec-eyebrow">About the clinic</p>
+                                <h2 class="rcec-title" style="font-size: clamp(1.55rem, 2.4vw, 2.05rem);">
+                                    Healthcare that feels personal again.
+                                </h2>
+                                <p style="color:#4b5563;line-height:1.65;font-size:1rem;margin:0 0 1.25rem;">
+                                    Riverchase Express Clinic is a CRNP-led primary and minute-care practice in Hoover. We
+                                    focus on one-on-one care in a calm, welcoming room &mdash; listening closely, treating you
+                                    with respect, and helping you feel confident about your health.
+                                </p>
+                                <p style="color:#4b5563;line-height:1.65;font-size:1rem;margin:0 0 1.5rem;">
+                                    Whether you're stopping in for a quick visit or coming back for ongoing care, the focus
+                                    is the same: real conversation, real attention, real follow-through.
+                                </p>
+
+                                <div class="rcec-mv-stack">
+                                    <div class="rcec-mv-item">
+                                        <span class="rcec-mv-label">Mission</span>
+                                        <p>Compassionate, convenient care that puts patients first &mdash; making everyday healthcare easier, more personal, and more accessible.</p>
+                                    </div>
+                                    <div class="rcec-mv-item">
+                                        <span class="rcec-mv-label">Vision</span>
+                                        <p>A trusted space where patients feel cared for, understood, and supported at every stage of their health journey.</p>
+                                    </div>
+                                </div>
+
+                                <style>
+                                    #textparagraph-c4ad9b14-8a3e-4a91-ae27-c53b56797cfa .rcec-mv-stack { display: grid; gap: 1rem; margin-top: 0.5rem; }
+                                    #textparagraph-c4ad9b14-8a3e-4a91-ae27-c53b56797cfa .rcec-mv-item {
+                                        padding-left: 1rem;
+                                        border-left: 3px solid #70b69b;
+                                    }
+                                    #textparagraph-c4ad9b14-8a3e-4a91-ae27-c53b56797cfa .rcec-mv-label {
+                                        display: block;
+                                        color: #468cc5;
+                                        font-size: 0.7rem;
+                                        font-weight: 700;
+                                        letter-spacing: 0.18em;
+                                        text-transform: uppercase;
+                                        margin-bottom: 0.3rem;
+                                    }
+                                    #textparagraph-c4ad9b14-8a3e-4a91-ae27-c53b56797cfa .rcec-mv-item p {
+                                        color: #2b2d42;
+                                        font-size: 0.93rem;
+                                        line-height: 1.55;
+                                        margin: 0;
+                                    }
+                                </style>
+                            </section>
+
+                            <style>
+                                .healowaware-gallery-image {
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+
+                                .healowaware-gallery-image img {
+                                    object-fit: cover;
+                                    height: 100%;
+                                    transition: transform 0.35s ease;
+                                }
+
+                                .healowaware-gallery-image:hover img {
+                                    transform: scale(1.04);
+                                }
+
+                                .healowaware-lightbox-backdrop {
+                                    position: fixed;
+                                    inset: 0;
+                                    background: rgba(15, 23, 42, 0.85);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    z-index: 1080;
+                                    backdrop-filter: blur(2px);
+                                }
+
+                                .healowaware-lightbox-content {
+                                    position: relative;
+                                    max-width: 90vw;
+                                    max-height: 90vh;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                .healowaware-lightbox-content img {
+                                    max-width: 90vw;
+                                    max-height: 85vh;
+                                    border-radius: 1.25rem;
+                                    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35);
+                                }
+
+                                .healowaware-lightbox-content button {
+                                    position: absolute;
+                                    background: rgba(15, 23, 42, 0.6);
+                                    color: #f8fafc;
+                                    border: none;
+                                    width: 44px;
+                                    height: 44px;
+                                    border-radius: 50%;
+                                    font-size: 1.5rem;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    cursor: pointer;
+                                    transition: background 0.2s ease-in-out;
+                                }
+
+                                .healowaware-lightbox-content button:hover {
+                                    background: rgba(15, 23, 42, 0.85);
+                                }
+
+                                .healowaware-lightbox-close {
+                                    top: -54px;
+                                    right: 0;
+                                }
+
+                                .healowaware-lightbox-prev {
+                                    left: -56px;
+                                }
+
+                                .healowaware-lightbox-next {
+                                    right: -56px;
+                                }
+
+                                body.hw-lightbox-open {
+                                    overflow: hidden;
+                                }
+
+                                @media (max-width: 767px) {
+                                    .healowaware-gallery-image {
+                                        border-radius: 0.95rem;
+                                    }
+
+                                    .healowaware-lightbox-prev {
+                                        left: -32px;
+                                    }
+
+                                    .healowaware-lightbox-next {
+                                        right: -32px;
+                                    }
+
+                                    .healowaware-lightbox-content button {
+                                        width: 36px;
+                                        height: 36px;
+                                        font-size: 1.2rem;
+                                    }
+
+                                    .healowaware-lightbox-close {
+                                        top: -48px;
+                                    }
+                                }
+                            </style>
+                            <section id="healowaware-photogallery-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                class="container-fluid px-0 pe-2" style="color: #212529; margin-top: 3.5rem;">
+                                <div class="container">
+                                    <div class="row align-items-center ">
+                                        <div class="col-lg-12 px-0">
+                                            <p class="rcec-eyebrow">Our space</p>
+                                            <h3 class="rcec-title rcec-title--sm">Inside the clinic.</h3>
+                                            <div class="images-video-tabs">
+                                                <div class="tab-content" id="practice-gallery-tab-content">
+                                                    <div class="tab-pane fade show active" id="practice-images-gallery"
+                                                        role="tabpanel" aria-labelledby="images-tab">
+                                                        <div class="position-relative">
+                                                            <div
+                                                                class="healowaware-gallery-carousel-wrapper position-relative">
+                                                                <div id="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                    class="owl-carousel healowaware-gallery-carousel js-hw-owl-carousel"
+                                                                    data-hw-owl-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":6000,"autoplayHoverPause":true,"smartSpeed":500,"autoHeight":true,"nav":false,"dots":false,"responsiveClass":true,"responsive":{"0":{"items":1,"margin":16},"768":{"items":2,"margin":24},"1200":{"items":2,"margin":32}}}'>
+                                                                    <div
+                                                                        class="healowaware-gallery-slide py-2 d-flex justify-content-center">
+                                                                        <button type="button"
+                                                                            class="w-100 healowaware-gallery-image border-0 p-0 bg-transparent gallery-lightbox-trigger"
+                                                                            data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                            data-index="0">
+                                                                            <img src="assets/img/20260302_063555.jpg"
+                                                                                alt="Image 1" class="img-fluid w-100"
+                                                                                loading="lazy"
+                                                                                onerror="this.onerror=null;this.src='assets/img/defaultImage.jpg';">
+                                                                        </button>
+                                                                    </div>
+                                                                    <div
+                                                                        class="healowaware-gallery-slide py-2 d-flex justify-content-center">
+                                                                        <button type="button"
+                                                                            class="w-100 healowaware-gallery-image border-0 p-0 bg-transparent gallery-lightbox-trigger"
+                                                                            data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                            data-index="1">
+                                                                            <img src="assets/img/20260302_063603.jpg"
+                                                                                alt="Image" class="img-fluid w-100"
+                                                                                loading="lazy"
+                                                                                onerror="this.onerror=null;this.src='assets/img/defaultImage.jpg';">
+                                                                        </button>
+                                                                    </div>
+                                                                    <div
+                                                                        class="healowaware-gallery-slide py-2 d-flex justify-content-center">
+                                                                        <button type="button"
+                                                                            class="w-100 healowaware-gallery-image border-0 p-0 bg-transparent gallery-lightbox-trigger"
+                                                                            data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                            data-index="2">
+                                                                            <img src="assets/img/20260302_063854.jpg"
+                                                                                alt="Image" class="img-fluid w-100"
+                                                                                loading="lazy"
+                                                                                onerror="this.onerror=null;this.src='assets/img/defaultImage.jpg';">
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <button class="carousel-control-prev" type="button"
+                                                                    data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                    data-hw-owl-action="prev">
+                                                                    <span class="carousel-control-prev-icon"
+                                                                        aria-hidden="true"></span>
+                                                                </button>
+                                                                <button class="carousel-control-next" type="button"
+                                                                    data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                    data-hw-owl-action="next">
+                                                                    <span class="carousel-control-next-icon"
+                                                                        aria-hidden="true"></span>
+
+                                                                </button>
+                                                                <div class="carousel-indicators">
+                                                                    <button type="button"
+                                                                        data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                        data-hw-owl-slide="0" class="active"
+                                                                        aria-label="Slide 1"
+                                                                        aria-current="true"></button>
+                                                                    <button type="button"
+                                                                        data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                        data-hw-owl-slide="1" class=""
+                                                                        aria-label="Slide 2"></button>
+                                                                    <button type="button"
+                                                                        data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
+                                                                        data-hw-owl-slide="2" class=""
+                                                                        aria-label="Slide 3"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div class="healowaware-lightbox-backdrop d-none"
+                                id="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206-lightbox"
+                                role="dialog" aria-hidden="true">
+                                <div class="healowaware-lightbox-content">
+                                    <button type="button" class="healowaware-lightbox-close" data-action="close"
+                                        aria-label="Close preview">×</button>
+                                    <button type="button" class="healowaware-lightbox-prev" data-action="prev"
+                                        aria-label="Previous image">&lsaquo;</button>
+                                    <img src="" alt="" loading="lazy">
+                                    <button type="button" class="healowaware-lightbox-next" data-action="next"
+                                        aria-label="Next image">&rsaquo;</button>
+                                </div>
+                            </div>
+                            <script>
+                                (function () {
+                                    var lightbox = document.getElementById(
+                                        'healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206-lightbox'
+                                    );
+                                    if (!lightbox) return;
+                                    var imageEl = lightbox.querySelector('img');
+                                    var triggers = document.querySelectorAll(
+                                        '[data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"]'
+                                    );
+                                    var images = [{
+                                        "id": 1,
+                                        "src": "assets/img/20260302_063555.jpg",
+                                        "alt": "Image 1"
+                                    }, {
+                                        "id": "3c0b8ca4-ab2b-46fa-aa2a-590dc11d574f",
+                                        "src": "assets/img/20260302_063603.jpg",
+                                        "alt": "Image"
+                                    }, {
+                                        "id": "e0f24275-b017-48fd-8d8c-b107681baaf5",
+                                        "src": "assets/img/20260302_063854.jpg",
+                                        "alt": "Image"
+                                    }];
+                                    var currentIndex = 0;
+
+                                    function show(index) {
+                                        if (!images[index]) return;
+                                        currentIndex = index;
+                                        imageEl.src = images[index].src;
+                                        imageEl.alt = images[index].alt || '';
+                                        lightbox.classList.remove('d-none');
+                                        document.body.classList.add('hw-lightbox-open');
+                                    }
+
+                                    function hide() {
+                                        lightbox.classList.add('d-none');
+                                        document.body.classList.remove('hw-lightbox-open');
+                                    }
+
+                                    var closeBtn = lightbox.querySelector('[data-action="close"]');
+                                    if (closeBtn) {
+                                        closeBtn.addEventListener('click', function (event) {
+                                            event.preventDefault();
+                                            hide();
+                                        });
+                                    }
+
+                                    lightbox.addEventListener('click', function (event) {
+                                        event.stopPropagation();
+                                        if (event.target === lightbox) {
+                                            hide();
+                                        }
+                                    });
+
+                                    var prevBtn = lightbox.querySelector('[data-action="prev"]');
+                                    if (prevBtn) {
+                                        prevBtn.addEventListener('click', function (event) {
+                                            event.preventDefault();
+                                            show((currentIndex - 1 + images.length) % images.length);
+                                        });
+                                    }
+
+                                    var nextBtn = lightbox.querySelector('[data-action="next"]');
+                                    if (nextBtn) {
+                                        nextBtn.addEventListener('click', function (event) {
+                                            event.preventDefault();
+                                            show((currentIndex + 1) % images.length);
+                                        });
+                                    }
+
+                                    document.addEventListener('keydown', function (event) {
+                                        if (lightbox.classList.contains('d-none')) return;
+                                        if (event.key === 'Escape') {
+                                            hide();
+                                        } else if (event.key === 'ArrowLeft') {
+                                            show((currentIndex - 1 + images.length) % images.length);
+                                        } else if (event.key === 'ArrowRight') {
+                                            show((currentIndex + 1) % images.length);
+                                        }
+                                    });
+
+                                    Array.prototype.forEach.call(triggers, function (trigger) {
+                                        trigger.addEventListener('click', function (event) {
+                                            event.preventDefault();
+                                            var index = parseInt(trigger.getAttribute('data-index'),
+                                                10);
+                                            if (!isNaN(index)) {
+                                                show(index);
+                                            }
+                                        });
+                                    });
+                                })();
+                            </script>
+
+                        </div>
+                        <div class="col-md-5 col-12 ps-md-4 mt-4 mt-md-0">
+                            <aside id="location-details" class="rcec-visit-card">
+                                <div class="rcec-visit-card__map">
+                                    <iframe
+                                        title="Riverchase Express Clinic location map"
+                                        src="https://maps.google.com/maps?q=3075%20John%20Hawkins%20Pkwy%2C%20Hoover%2C%20AL%2035244%2C%20USA&amp;t=&amp;z=15&amp;ie=UTF8&amp;output=embed&amp;iwloc=near"
+                                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                        allowfullscreen></iframe>
+                                </div>
+
+                                <div class="rcec-visit-card__body">
+                                    <div class="rcec-visit-card__header">
+                                        <p class="rcec-eyebrow rcec-visit-card__eyebrow">Plan your visit</p>
+                                        <h3 class="rcec-visit-card__title">Visit us in Hoover</h3>
+                                        <span id="rcec-visit-status" class="rcec-visit-card__status" data-status="closed">
+                                            <span class="rcec-visit-card__status-dot"></span>
+                                            <span class="rcec-visit-card__status-text">Checking hours&hellip;</span>
+                                        </span>
+                                    </div>
+
+                                    <ul class="rcec-visit-card__contact">
+                                        <li>
+                                            <i class="material-icons" aria-hidden="true">place</i>
+                                            <div>
+                                                <span class="rcec-visit-card__label">Address</span>
+                                                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=3075+John+Hawkins+Pkwy+Suite+G+Hoover+AL+35244" target="_blank" rel="noopener">
+                                                    3075 John Hawkins Pkwy, Suite&nbsp;G<br>Hoover, AL 35244
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="material-icons" aria-hidden="true">call</i>
+                                            <div>
+                                                <span class="rcec-visit-card__label">Phone</span>
+                                                <a href="tel:205-536-6019">205-536-6019</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="material-icons" aria-hidden="true">print</i>
+                                            <div>
+                                                <span class="rcec-visit-card__label">Fax</span>
+                                                <span>1-833-468-5559</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="material-icons" aria-hidden="true">mail_outline</i>
+                                            <div>
+                                                <span class="rcec-visit-card__label">Email</span>
+                                                <a href="mailto:riverchaseexpressclinic@gmail.com">riverchaseexpressclinic@gmail.com</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <div class="rcec-visit-card__divider"></div>
+
+                                    <div class="rcec-visit-card__hours">
+                                        <p class="rcec-visit-card__label rcec-visit-card__hours-label">Office hours</p>
+                                        <ul>
+                                            <li><span>Monday &ndash; Saturday</span><span>9:00 AM &ndash; 2:00 PM</span></li>
+                                            <li class="is-closed"><span>Sunday</span><span>Closed</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="rcec-visit-card__actions">
+                                        <a class="rcec-visit-card__btn rcec-visit-card__btn--primary"
+                                           href="https://www.google.com/maps/dir/?api=1&amp;destination=3075+John+Hawkins+Pkwy+Suite+G+Hoover+AL+35244"
+                                           target="_blank" rel="noopener">
+                                            <i class="material-icons" aria-hidden="true">directions</i>
+                                            Get directions
+                                        </a>
+                                        <a class="rcec-visit-card__btn rcec-visit-card__btn--secondary"
+                                           href="tel:205-536-6019">
+                                            <i class="material-icons" aria-hidden="true">phone</i>
+                                            Call clinic
+                                        </a>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <style>
+                                .rcec-visit-card {
+                                    background: #ffffff;
+                                    border: 1px solid #e5e7eb;
+                                    border-radius: 14px;
+                                    box-shadow: 0 18px 38px -22px rgba(13, 46, 79, 0.22), 0 2px 6px rgba(13, 46, 79, 0.04);
+                                    overflow: hidden;
+                                    font-family: "Montserrat", sans-serif;
+                                    color: #2b2d42;
+                                }
+                                @media (min-width: 992px) {
+                                    .rcec-visit-card { position: sticky; top: 110px; }
+                                }
+                                .rcec-visit-card__map {
+                                    position: relative;
+                                    line-height: 0;
+                                    background: #f3f4f6;
+                                    border-bottom: 1px solid #e5e7eb;
+                                }
+                                .rcec-visit-card__map iframe {
+                                    width: 100%;
+                                    height: 220px;
+                                    border: 0;
+                                    display: block;
+                                }
+                                .rcec-visit-card__body {
+                                    padding: 1.6rem 1.6rem 1.4rem;
+                                }
+                                .rcec-visit-card__header { margin-bottom: 1.1rem; }
+                                .rcec-visit-card__eyebrow {
+                                    margin: 0 0 0.35rem;
+                                    color: #468cc5;
+                                }
+                                .rcec-visit-card__title {
+                                    font-family: "Montserrat", sans-serif;
+                                    font-size: 1.4rem;
+                                    font-weight: 700;
+                                    color: #0d2e4f;
+                                    margin: 0 0 0.65rem;
+                                    line-height: 1.25;
+                                    letter-spacing: -0.01em;
+                                }
+                                .rcec-visit-card__status {
+                                    display: inline-flex;
+                                    align-items: center;
+                                    gap: 0.45rem;
+                                    padding: 0.3rem 0.7rem;
+                                    background: #f3f4f6;
+                                    border-radius: 999px;
+                                    font-size: 0.78rem;
+                                    font-weight: 600;
+                                    color: #4b5563;
+                                }
+                                .rcec-visit-card__status[data-status="open"] {
+                                    background: #ecf6f1;
+                                    color: #2f6b54;
+                                }
+                                .rcec-visit-card__status[data-status="closed"] {
+                                    background: #fdf2f1;
+                                    color: #8a3d2f;
+                                }
+                                .rcec-visit-card__status-dot {
+                                    width: 7px; height: 7px; border-radius: 50%;
+                                    background: #9ca3af;
+                                    box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.18);
+                                }
+                                .rcec-visit-card__status[data-status="open"] .rcec-visit-card__status-dot {
+                                    background: #4caf80;
+                                    box-shadow: 0 0 0 3px rgba(76, 175, 128, 0.22);
+                                    animation: rcecPulse 2.4s ease-in-out infinite;
+                                }
+                                .rcec-visit-card__status[data-status="closed"] .rcec-visit-card__status-dot {
+                                    background: #d97757;
+                                    box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.18);
+                                }
+                                @keyframes rcecPulse {
+                                    0%, 100% { box-shadow: 0 0 0 3px rgba(76, 175, 128, 0.22); }
+                                    50% { box-shadow: 0 0 0 6px rgba(76, 175, 128, 0.04); }
+                                }
+                                .rcec-visit-card__contact {
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    display: grid;
+                                    gap: 0.85rem;
+                                }
+                                .rcec-visit-card__contact > li {
+                                    display: grid;
+                                    grid-template-columns: 22px 1fr;
+                                    gap: 0.85rem;
+                                    align-items: start;
+                                }
+                                .rcec-visit-card__contact .material-icons {
+                                    font-size: 18px;
+                                    color: #468cc5;
+                                    margin-top: 2px;
+                                }
+                                .rcec-visit-card__label {
+                                    display: block;
+                                    font-size: 0.7rem;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    letter-spacing: 0.14em;
+                                    color: #6b7280;
+                                    margin-bottom: 0.15rem;
+                                }
+                                .rcec-visit-card__contact a,
+                                .rcec-visit-card__contact span:not(.rcec-visit-card__label) {
+                                    color: #2b2d42;
+                                    font-size: 0.93rem;
+                                    line-height: 1.45;
+                                    text-decoration: none;
+                                    word-break: break-word;
+                                }
+                                .rcec-visit-card__contact a:hover {
+                                    color: #468cc5;
+                                    text-decoration: underline;
+                                }
+                                .rcec-visit-card__divider {
+                                    height: 1px;
+                                    background: #e5e7eb;
+                                    margin: 1.25rem 0;
+                                }
+                                .rcec-visit-card__hours-label { margin-bottom: 0.55rem; }
+                                .rcec-visit-card__hours ul {
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    display: grid;
+                                    gap: 0.4rem;
+                                }
+                                .rcec-visit-card__hours li {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: baseline;
+                                    font-size: 0.93rem;
+                                    color: #2b2d42;
+                                }
+                                .rcec-visit-card__hours li > span:first-child { color: #4b5563; }
+                                .rcec-visit-card__hours li.is-closed > span { color: #9ca3af; }
+                                .rcec-visit-card__actions {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    gap: 0.6rem;
+                                    margin-top: 1.4rem;
+                                }
+                                .rcec-visit-card__btn {
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 0.4rem;
+                                    padding: 0.7rem 0.8rem;
+                                    border-radius: 999px;
+                                    font-size: 0.86rem;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+                                    line-height: 1;
+                                }
+                                .rcec-visit-card__btn .material-icons { font-size: 16px; }
+                                .rcec-visit-card__btn--primary {
+                                    background: #70b69b;
+                                    color: #ffffff;
+                                    border: 1px solid #70b69b;
+                                }
+                                .rcec-visit-card__btn--primary:hover {
+                                    background: #5fa389;
+                                    border-color: #5fa389;
+                                    color: #ffffff;
+                                }
+                                .rcec-visit-card__btn--secondary {
+                                    background: transparent;
+                                    color: #468cc5;
+                                    border: 1px solid #468cc5;
+                                }
+                                .rcec-visit-card__btn--secondary:hover {
+                                    background: #468cc5;
+                                    color: #ffffff;
+                                }
+                                @media (max-width: 575px) {
+                                    .rcec-visit-card__body { padding: 1.35rem 1.25rem 1.25rem; }
+                                    .rcec-visit-card__map iframe { height: 200px; }
+                                    .rcec-visit-card__actions { grid-template-columns: 1fr; }
+                                }
+                            </style>
+
+                            <script>
+                                (function () {
+                                    var pill = document.getElementById('rcec-visit-status');
+                                    if (!pill) return;
+                                    var dotText = pill.querySelector('.rcec-visit-card__status-text');
+                                    function fmt(h) {
+                                        var period = h >= 12 ? 'PM' : 'AM';
+                                        var hr = h % 12; if (hr === 0) hr = 12;
+                                        return hr + ' ' + period;
+                                    }
+                                    function update() {
+                                        var now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+                                        var day = now.getDay();
+                                        var hr = now.getHours();
+                                        var min = now.getMinutes();
+                                        var openH = 9, closeH = 14;
+                                        var isOpenDay = day >= 1 && day <= 6;
+                                        var nowMin = hr * 60 + min;
+                                        var openMin = openH * 60;
+                                        var closeMin = closeH * 60;
+                                        if (isOpenDay && nowMin >= openMin && nowMin < closeMin) {
+                                            pill.setAttribute('data-status', 'open');
+                                            dotText.textContent = 'Open today until ' + fmt(closeH);
+                                            return;
+                                        }
+                                        var nextDay = day, nextLabel;
+                                        if (isOpenDay && nowMin < openMin) {
+                                            nextLabel = 'today';
+                                        } else {
+                                            for (var i = 1; i <= 7; i++) {
+                                                var d = (day + i) % 7;
+                                                if (d >= 1 && d <= 6) {
+                                                    var names = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+                                                    nextLabel = i === 1 ? 'tomorrow' : names[d];
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        pill.setAttribute('data-status', 'closed');
+                                        dotText.textContent = 'Closed \u00B7 opens ' + nextLabel + ' at ' + fmt(openH);
+                                    }
+                                    update();
+                                    setInterval(update, 60 * 1000);
+                                })();
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="healowaware-list-2125" class="container-fluid py-5"
+                style="background-color: #F8F9FA; font-family: &quot;Montserrat&quot;, sans-serif;">
+                <div class="container" id="services-bx">
+                    <style>
+                        #services-bx .services-intro { color: #2b2d42; max-width: 60ch; margin-bottom: 2rem; }
+                        #services-bx .services-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                            gap: 1.25rem;
+                        }
+                        #services-bx .service-card {
+                            background: #ffffff;
+                            border: 1px solid rgba(70, 140, 197, 0.18);
+                            border-radius: 12px;
+                            padding: 1.5rem 1.5rem 1.25rem;
+                            transition: box-shadow 0.25s ease, transform 0.25s ease;
+                        }
+                        #services-bx .service-card:hover {
+                            box-shadow: 0 12px 28px -18px rgba(15, 23, 42, 0.25);
+                            transform: translateY(-2px);
+                        }
+                        #services-bx .service-card h5 {
+                            color: #0d2e4f;
+                            font-weight: 600;
+                            font-size: 1.05rem;
+                            margin: 0 0 0.75rem;
+                            padding-bottom: 0.5rem;
+                            border-bottom: 2px solid #468cc5;
+                        }
+                        #services-bx .service-list {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        #services-bx .service-list li {
+                            position: relative;
+                            padding: 0.2rem 0 0.2rem 1.4rem;
+                            color: #3a3f47;
+                            font-size: 0.93rem;
+                            line-height: 1.5;
+                        }
+                        #services-bx .service-list li::before {
+                            content: "✓";
+                            position: absolute;
+                            left: 0;
+                            top: 0.2rem;
+                            color: #468cc5;
+                            font-weight: 700;
+                        }
+                        #services-bx .services-footnote {
+                            margin-top: 1.5rem;
+                            font-size: 0.85rem;
+                            color: #6c757d;
+            <section class="rcec-section rcec-section--cream" id="rcec-values-section">
+                <div class="container">
+                    <p class="rcec-eyebrow">What we stand for</p>
+                    <h2 class="rcec-title">Our values aren't a poster on the wall.</h2>
+                    <p class="rcec-lead">
+                        They're how we run the clinic, how we talk to you, and how we follow up after you leave.
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rcec-card h-100">
+                                <div class="rcec-card-icon"><i class="material-icons">favorite</i></div>
+                                <h5>Compassion first</h5>
+                                <p>We lead with kindness, empathy, and genuine human connection.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rcec-card h-100">
+                                <div class="rcec-card-icon"><i class="material-icons">person</i></div>
+                                <h5>Personalized care</h5>
+                                <p>Every patient is unique. We take time to listen and tailor care to your needs.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rcec-card h-100">
+                                <div class="rcec-card-icon"><i class="material-icons">schedule</i></div>
+                                <h5>Simplicity &amp; convenience</h5>
+                                <p>Healthcare should be easy to access, without stress or long waits.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rcec-card h-100">
+                                <div class="rcec-card-icon"><i class="material-icons">verified_user</i></div>
+                                <h5>Trust &amp; respect</h5>
+                                <p>We build relationships through honesty, respect, and clear communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                            font-style: italic;
+                        }
+                    </style>
+
+                    <p class="rcec-eyebrow">What we treat</p>
+                    <h2 class="rcec-title">Our services.</h2>
+                    <p class="rcec-lead services-intro">
+                        Fast, high-quality care for common conditions &mdash; every service below is offered
+                        within a safe, evidence-based scope of practice.
+                    </p>
+
+                    <div class="services-grid">
+
+                        <div class="service-card">
+                            <h5>Acute Care &amp; Walk-Ins</h5>
+                            <ul class="service-list">
+                                <li>Colds, sinusitis &amp; bronchitis</li>
+                                <li>Sore throat &amp; strep testing</li>
+                                <li>Ear infections</li>
+                                <li>Urinary tract infections (UTIs)</li>
+                                <li>Skin infections (cellulitis, abscess)</li>
+                                <li>Pink eye (conjunctivitis)</li>
+                                <li>Nausea, diarrhea &amp; constipation</li>
+                                <li>COVID-19, flu &amp; RSV testing &amp; treatment</li>
+                                <li>Fever evaluation</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Chronic Disease Management</h5>
+                            <ul class="service-list">
+                                <li>Hypertension (blood pressure)</li>
+                                <li>Type 2 diabetes follow-ups</li>
+                                <li>High cholesterol (hyperlipidemia)</li>
+                                <li>Mild to moderate asthma</li>
+                                <li>Stable thyroid disorders</li>
+                                <li>Refills for non-controlled medications</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Point-of-Care Testing</h5>
+                            <ul class="service-list">
+                                <li>Rapid strep</li>
+                                <li>Urinalysis</li>
+                                <li>Pregnancy</li>
+                                <li>Blood glucose &amp; A1C</li>
+                                <li>Rapid flu &amp; COVID</li>
+                                <li>Mononucleosis (mono)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Minor Procedures</h5>
+                            <ul class="service-list">
+                                <li>Wound care &amp; dressing changes</li>
+                                <li>Suture &amp; staple removal</li>
+                                <li>Basic laceration repair (when appropriate)</li>
+                                <li>Splinter removal</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Dermatology</h5>
+                            <ul class="service-list">
+                                <li>Eczema &amp; contact dermatitis</li>
+                                <li>Acne treatment</li>
+                                <li>Wart treatment</li>
+                                <li>Fungal infections (ringworm, athlete&rsquo;s foot)</li>
+                                <li>Insect bites &amp; allergic skin reactions</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Preventive &amp; Wellness</h5>
+                            <ul class="service-list">
+                                <li>Annual physical exams</li>
+                                <li>Sports &amp; school physicals</li>
+                                <li>Routine labs (CBC, CMP, A1C, lipids)</li>
+                                <li>Vaccines (flu, COVID, Tdap, shingles, pneumonia)</li>
+                                <li>Smoking cessation counseling</li>
+                                <li>Weight management support</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Women&rsquo;s Health</h5>
+                            <ul class="service-list">
+                                <li>Birth control counseling &amp; prescriptions</li>
+                                <li>STI testing &amp; treatment</li>
+                                <li>Vaginitis (yeast, BV)</li>
+                                <li>Pregnancy testing</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Occupational &amp; Convenience</h5>
+                            <ul class="service-list">
+                                <li>Pre-employment physicals</li>
+                                <li>Drug screening</li>
+                                <li>Return-to-work evaluations</li>
+                                <li>Basic travel medicine consults</li>
+                                <li>Work &amp; school notes</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h5>Additional Services</h5>
+                            <ul class="service-list">
+                                <li>Telehealth visits</li>
+                                <li>Membership / subscription primary care</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <p class="services-footnote">
+                        Don&rsquo;t see what you need? Call us at
+                        <a href="tel:2055366019" style="color:#468cc5;">205-536-6019</a> &mdash;
+                        we&rsquo;ll let you know if we can help or refer you to the right place.
+                    </p>
+                </div>
+            </section>
+            <style>
+                .healowaware-speaker-card {
+                    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
+                    box-shadow: 0 12px 32px -24px rgba(15, 23, 42, 0.25);
+                    background-color: var(--healowaware-speaker-card-bg, #ffffff);
+                    color: var(--healowaware-speaker-card-text, #0f172a);
+                }
+
+                .healowaware-speaker-card:hover,
+                .healowaware-speaker-card:focus-within {
+                    transform: translateY(-6px);
+                    box-shadow: 0 28px 52px -24px rgba(56, 189, 248, 0.25);
+                    background-color: var(--healowaware-speaker-card-hover-bg, var(--healowaware-speaker-card-bg, #ffffff));
+                    color: var(--healowaware-speaker-card-text, #0f172a);
+                }
+
+                .healowaware-speaker-card__designation {
+                    color: var(--healowaware-speaker-card-meta, rgba(15, 23, 42, 0.72));
+                }
+
+                .healowaware-speaker-card__description {
+                    color: var(--healowaware-speaker-card-body, rgba(15, 23, 42, 0.78));
+                }
+
+                .healowaware-speaker-card__initials {
+                    color: var(--healowaware-speaker-card-text, #0f172a);
+                }
+
+                .healowaware-speaker-card__avatar img,
+                .healowaware-speaker-card__avatar span {
+                    border-radius: inherit;
+                }
+            </style>
+
+            <section id="healowaware-speakers-2126" class="rcec-section rcec-section--white rcec-provider">
+                <div class="container">
+                    <p class="rcec-eyebrow">The provider</p>
+                    <h2 class="rcec-title">One provider. Every visit.</h2>
+                    <p class="rcec-lead">
+                        At Riverchase Express Clinic, you&rsquo;re seen by the same Family Nurse Practitioner
+                        every time. No rotating staff, no rushed handoffs &mdash; just real continuity of care.
+                    </p>
+
+                    <div class="row align-items-start g-5 rcec-provider__row">
+                        <div class="col-lg-5">
+                            <div class="rcec-portrait-frame">
+                                <img src="assets/img/20260521_084053.webp" alt="Niki Patel, CRNP, FNP-BC"
+                                    loading="lazy">
+                            </div>
+
+                            <div class="rcec-provider__stats">
+                                <div>
+                                    <span class="rcec-provider__stat-num">11+</span>
+                                    <span class="rcec-provider__stat-lbl">Years in practice</span>
+                                </div>
+                                <div>
+                                    <span class="rcec-provider__stat-num">ANCC</span>
+                                    <span class="rcec-provider__stat-lbl">Board certified</span>
+                                </div>
+                                <div>
+                                    <span class="rcec-provider__stat-num">U.&nbsp;Miami</span>
+                                    <span class="rcec-provider__stat-lbl">M.S.N., FNP track</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="rcec-provider__bio">
+                                <h3 class="rcec-provider__name">Niki Patel</h3>
+                                <p class="rcec-provider__creds">
+                                    Family Nurse Practitioner &nbsp;&middot;&nbsp; CRNP, FNP-BC
+                                </p>
+
+                                <p>
+                                    Niki Patel, CRNP, FNP-BC, is a board-certified Family Nurse Practitioner
+                                    dedicated to compassionate, patient-centered care. Certified through the
+                                    American Nurses Credentialing Center (ANCC), she brings over 11 years of
+                                    diverse experience across outpatient and inpatient settings.
+                                </p>
+                                <p>
+                                    She earned her undergraduate degree from the University of West Georgia
+                                    and her Master&rsquo;s from the University of Miami. Her clinical background
+                                    allows her to confidently manage a wide range of acute and chronic conditions,
+                                    with a focus on preventive care and overall wellness.
+                                </p>
+
+                                <blockquote class="rcec-provider__quote">
+                                    &ldquo;Healthcare should feel approachable, supportive, and easy to
+                                    navigate.&rdquo;
+                                </blockquote>
+
+                                <p>
+                                    Niki believes in building meaningful relationships with her patients.
+                                    She takes time to listen, understand individual concerns, and create
+                                    care plans that are both practical and personalized.
+                                </p>
+                                <p>
+                                    Outside the clinic, Niki is a proud mom of two energetic, joyful boys.
+                                    She&rsquo;s deeply family-oriented and brings that same sense of care
+                                    and dedication to her patients. In her free time, she enjoys hiking,
+                                    exploring creativity through art and design, and continuously finding
+                                    ways to grow &mdash; both personally and professionally.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .rcec-provider .rcec-provider__row { margin-top: 2.5rem; }
+
+                    .rcec-portrait-frame {
+                        position: relative;
+                        max-width: 340px;
+                        margin: 0 auto;
+                    }
+                    .rcec-portrait-frame::before {
+                        content: '';
+                        position: absolute;
+                        inset: 22px -22px -22px 22px;
+                        background: #ecf6f1;
+                        border-radius: 20px;
+                        z-index: 0;
+                    }
+                    .rcec-portrait-frame::after {
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        left: -10px;
+                        width: 56px;
+                        height: 56px;
+                        border-top: 3px solid #70b69b;
+                        border-left: 3px solid #70b69b;
+                        border-top-left-radius: 20px;
+                        z-index: 2;
+                    }
+                    .rcec-portrait-frame img {
+                        position: relative;
+                        z-index: 1;
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 4 / 5;
+                        object-fit: cover;
+                        object-position: center 20%;
+                        border-radius: 20px;
+                        display: block;
+                        box-shadow: 0 18px 38px -22px rgba(13, 46, 79, 0.35);
+                    }
+
+                    .rcec-provider__stats {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 0;
+                        max-width: 340px;
+                        margin: 1.6rem auto 0;
+                        border-top: 1px solid #e5e7eb;
+                        border-bottom: 1px solid #e5e7eb;
+                        padding: 0.85rem 0;
+                    }
+                    .rcec-provider__stats > div {
+                        text-align: center;
+                        padding: 0 0.5rem;
+                        border-right: 1px solid #e5e7eb;
+                    }
+                    .rcec-provider__stats > div:last-child { border-right: 0; }
+                    .rcec-provider__stat-num {
+                        display: block;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 700;
+                        font-size: 1.05rem;
+                        color: #0d2e4f;
+                        line-height: 1.15;
+                        margin-bottom: 0.2rem;
+                    }
+                    .rcec-provider__stat-lbl {
+                        display: block;
+                        font-size: 0.72rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.1em;
+                        color: #6b7280;
+                    }
+
+                    .rcec-provider__bio { max-width: 56ch; }
+                    .rcec-provider__name {
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 700;
+                        color: #0d2e4f;
+                        margin: 0 0 0.25rem;
+                        letter-spacing: -0.01em;
+                    }
+                    .rcec-provider__creds {
+                        font-size: 0.85rem;
+                        font-weight: 600;
+                        color: #468cc5;
+                        text-transform: none;
+                        letter-spacing: 0.02em;
+                        margin: 0 0 1.4rem;
+                        padding-bottom: 1.1rem;
+                        border-bottom: 1px solid #e5e7eb;
+                    }
+                    .rcec-provider__bio p {
+                        color: #4b5563;
+                        font-size: 1rem;
+                        line-height: 1.7;
+                        margin: 0 0 1.1rem;
+                    }
+                    .rcec-provider__quote {
+                        position: relative;
+                        margin: 1.6rem 0 1.6rem;
+                        padding: 0 0 0 1.5rem;
+                        border-left: 3px solid #70b69b;
+                        font-family: "Montserrat", sans-serif;
+                        font-style: italic;
+                        font-size: 1.15rem;
+                        line-height: 1.5;
+                        color: #0d2e4f;
+                        font-weight: 500;
+                        letter-spacing: -0.005em;
+                    }
+
+                    @media (max-width: 991.98px) {
+                        .rcec-provider__bio { max-width: none; margin-top: 1rem; }
+                        .rcec-provider__stats { max-width: 340px; }
+                    }
+                    @media (max-width: 480px) {
+                        .rcec-portrait-frame::before { inset: 16px -14px -14px 16px; }
+                        .rcec-provider__stat-num { font-size: 0.95rem; }
+                        .rcec-provider__quote { font-size: 1.05rem; padding-left: 1.1rem; }
+                    }
+                </style>
+            </section>
+            <section id="healowaware-list-2124" class="rcec-section rcec-section--white">
+                <div class="container">
+                    <p class="rcec-eyebrow">Coverage</p>
+                    <h2 class="rcec-title">Insurance we accept</h2>
+                    <p class="rcec-lead">
+                        We accept most major plans. Bring your insurance card to your visit, or call us first if you're
+                        unsure whether your plan is in-network.
+                    </p>
+
+                    <div class="rcec-chip-row">
+                        <span class="rcec-chip"><i class="material-icons">check_circle</i> Medicare</span>
+                        <span class="rcec-chip"><i class="material-icons">check_circle</i> Medicaid</span>
+                        <span class="rcec-chip"><i class="material-icons">check_circle</i> Most commercial insurance</span>
+                        <span class="rcec-chip"><i class="material-icons">check_circle</i> Self-pay welcome</span>
+                    </div>
+
+                    <p style="margin-top:1.5rem;color:#6b7280;font-size:0.88rem;">
+                        Don't see your plan? Call <a href="tel:2055366019" style="color:#468cc5;font-weight:600;">205-536-6019</a>
+                        and we'll verify before your visit.
+                    </p>
+                </div>
+            </section>
+            <section id="healowaware-testimonials-2127" class="rcec-section rcec-section--ink">
+                <style>
+                    #healowaware-testimonials-2127 .rcec-quote-mark {
+                        font-family: Georgia, "Times New Roman", serif;
+                        font-size: 7rem;
+                        line-height: 0.7;
+                        color: rgba(255,255,255,0.18);
+                        margin: 0 0 1rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-quote {
+                        font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+                        font-weight: 400;
+                        line-height: 1.5;
+                        color: #ffffff;
+                        max-width: 50ch;
+                        margin: 0 0 2rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-attribution {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-stars {
+                        color: #fbbf24;
+                        letter-spacing: 0.1em;
+                        font-size: 1rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-attr-divider {
+                        width: 1px; height: 32px;
+                        background: rgba(255,255,255,0.25);
+                    }
+                    #healowaware-testimonials-2127 .rcec-attr-name {
+                        color: #ffffff;
+                        font-weight: 600;
+                        font-size: 1rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-attr-role {
+                        display: block;
+                        color: rgba(255,255,255,0.6);
+                        font-size: 0.85rem;
+                        margin-top: 0.15rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-quote-nav {
+                        display: flex; gap: 0.5rem;
+                        margin-top: 2.5rem;
+                    }
+                    #healowaware-testimonials-2127 .rcec-quote-dot {
+                        width: 36px; height: 4px;
+                        background: rgba(255,255,255,0.2);
+                        border: 0; border-radius: 2px;
+                        cursor: pointer;
+                        transition: background 0.2s ease;
+                        padding: 0;
+                    }
+                    #healowaware-testimonials-2127 .rcec-quote-dot.is-active { background: #70b69b; }
+                    #healowaware-testimonials-2127 .rcec-quote-dot:hover { background: rgba(255,255,255,0.45); }
+                    #healowaware-testimonials-2127 .rcec-quote-fade { transition: opacity 0.3s ease; }
+                    #healowaware-testimonials-2127 .rcec-quote-fade.is-fading { opacity: 0; }
+                </style>
+
+                <div class="container">
+                    <p class="rcec-eyebrow">From our patients</p>
+                    <h2 class="rcec-title">Why people stay.</h2>
+
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="rcec-quote-fade" id="rcec-quote-block">
+                                <div class="rcec-quote-mark" aria-hidden="true">&ldquo;</div>
+                                <blockquote class="rcec-quote" id="rcec-quote-text">
+                                    Niki truly takes the time to listen. I never feel rushed, and she explains everything in a way that's easy to understand.
+                                </blockquote>
+                                <div class="rcec-attribution">
+                                    <span class="rcec-stars" aria-label="5 star rating">★★★★★</span>
+                                    <span class="rcec-attr-divider"></span>
+                                    <div>
+                                        <span class="rcec-attr-name" id="rcec-attr-name">Sarah M.</span>
+                                        <span class="rcec-attr-role" id="rcec-attr-role">Satisfied patient</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rcec-quote-nav" role="tablist" id="rcec-quote-nav">
+                                <button type="button" class="rcec-quote-dot is-active" aria-label="Quote 1" data-i="0"></button>
+                                <button type="button" class="rcec-quote-dot" aria-label="Quote 2" data-i="1"></button>
+                                <button type="button" class="rcec-quote-dot" aria-label="Quote 3" data-i="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    (function () {
+                        var quotes = [
+                            { text: "Niki truly takes the time to listen. I never feel rushed, and she explains everything in a way that's easy to understand.", name: "Sarah M.", role: "Satisfied patient" },
+                            { text: "Niki is kind, professional, and extremely knowledgeable. She made me feel comfortable right away and addressed all of my concerns.", name: "Priya S.", role: "Happy patient" },
+                            { text: "I love how easy it is to get care here. No long waits, and the quality of care is excellent.", name: "Michael T.", role: "Grateful patient" }
+                        ];
+                        var idx = 0;
+                        var block = document.getElementById('rcec-quote-block');
+                        var textEl = document.getElementById('rcec-quote-text');
+                        var nameEl = document.getElementById('rcec-attr-name');
+                        var roleEl = document.getElementById('rcec-attr-role');
+                        var nav = document.getElementById('rcec-quote-nav');
+                        if (!block || !nav) return;
+
+                        function show(i) {
+                            block.classList.add('is-fading');
+                            setTimeout(function () {
+                                idx = i;
+                                textEl.textContent = quotes[i].text;
+                                nameEl.textContent = quotes[i].name;
+                                roleEl.textContent = quotes[i].role;
+                                nav.querySelectorAll('.rcec-quote-dot').forEach(function (d, di) {
+                                    d.classList.toggle('is-active', di === i);
+                                });
+                                block.classList.remove('is-fading');
+                            }, 250);
+                        }
+                        nav.querySelectorAll('.rcec-quote-dot').forEach(function (d) {
+                            d.addEventListener('click', function () { show(parseInt(d.dataset.i, 10)); });
+                        });
+                        setInterval(function () { show((idx + 1) % quotes.length); }, 6500);
+                    })();
+                </script>
+            </section>
+            <section id="health-access" class="rcec-section rcec-section--cream">
+                <style>
+                    #health-access .rcec-portal-card {
+                        background: #ffffff;
+                        border: 1px solid rgba(13, 46, 79, 0.08);
+                        border-radius: 18px;
+                        padding: 3rem;
+                        box-shadow: 0 18px 40px -28px rgba(13, 46, 79, 0.18);
+                    }
+                    #health-access .rcec-features {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 0.85rem 1.5rem;
+                        margin: 1.5rem 0 2rem;
+                    }
+                    #health-access .rcec-feature {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 0.65rem;
+                        color: #0d2e4f;
+                        font-size: 0.95rem;
+                        line-height: 1.45;
+                    }
+                    #health-access .rcec-feature .material-icons {
+                        font-size: 20px;
+                        color: #70b69b;
+                        flex-shrink: 0;
+                        margin-top: 1px;
+                    }
+                    #health-access .rcec-portal-cta {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        padding: 0.85rem 1.6rem;
+                        background: #468cc5;
+                        color: #ffffff;
+                        font-weight: 600;
+                        border-radius: 999px;
+                        text-decoration: none;
+                        transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+                    }
+                    #health-access .rcec-portal-cta:hover {
+                        background: #3576ab;
+                        color: #ffffff;
+                        transform: translateY(-1px);
+                        box-shadow: 0 12px 26px -10px rgba(70, 140, 197, 0.55);
+                    }
+                    #health-access .rcec-portal-help {
+                        margin-top: 0.85rem;
+                        font-size: 0.85rem;
+                        color: #6b7280;
+                    }
+                    #health-access .rcec-portal-help a {
+                        color: #468cc5;
+                        font-weight: 600;
+                        text-decoration: none;
+                        border-bottom: 1px solid rgba(70, 140, 197, 0.4);
+                    }
+                    #health-access .rcec-portal-visual {
+                        position: relative;
+                        background: #f3f6fb;
+                        border: 1px solid rgba(13, 46, 79, 0.08);
+                        border-radius: 14px;
+                        padding: 1rem;
+                        box-shadow: 0 12px 32px -22px rgba(13, 46, 79, 0.25);
+                    }
+                    #health-access .rcec-portal-visual img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        border-radius: 8px;
+                    }
+                    @media (max-width: 575.98px) {
+                        #health-access .rcec-portal-card { padding: 2rem 1.5rem; }
+                        #health-access .rcec-features { grid-template-columns: 1fr; }
+                    }
+                </style>
+
+                <div class="container">
+                    <div id="patient-portal" class="rcec-portal-card">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-5 col-md-5 d-none d-md-block">
+                                <div class="rcec-portal-visual">
+                                    <img src="assets/img/portal.png" alt="Patient portal preview showing health information dashboard" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                                <p class="rcec-eyebrow">Manage online</p>
+                                <h2 class="rcec-title" style="font-size: clamp(1.45rem, 2.2vw, 1.85rem);">
+                                    Your health record, around the clock.
+                                </h2>
+                                <p style="color:#4b5563;line-height:1.6;margin:0 0 1.25rem;">
+                                    Secure online access to labs, medications, immunizations, and messages with your provider &mdash; from any device, any time.
+                                </p>
+
+                                <div class="rcec-features">
+                                    <div class="rcec-feature"><i class="material-icons">check</i> View lab results</div>
+                                    <div class="rcec-feature"><i class="material-icons">check</i> Book appointments online</div>
+                                    <div class="rcec-feature"><i class="material-icons">check</i> Send secure messages</div>
+                                    <div class="rcec-feature"><i class="material-icons">check</i> Get statements &amp; receipts</div>
+                                    <div class="rcec-feature"><i class="material-icons">check</i> Access health records</div>
+                                    <div class="rcec-feature"><i class="material-icons">check</i> View doctor's notes</div>
+                                </div>
+
+                                <a class="rcec-portal-cta" href="https://mycw257.ecwcloud.com/portal30935/jsp/100mp/login_otp.jsp" target="_blank" rel="noopener noreferrer">
+                                    Patient Portal Login
+                                    <i class="material-icons" style="font-size:18px;">arrow_forward</i>
+                                </a>
+                                <p class="rcec-portal-help">
+                                    Need help logging in? Call us at <a href="tel:2055366019">205-536-6019</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid py-5" id="columnblock-2129"
+                style="background-color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif; background: #ffffff; color: #2b2d42">
+                <div class="container">
+                    <div class="row g-2" style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif">
+                        <div class="col-md-6 col-12  p-1">
+                            <section class="py-5 shadow-sm" id="textparagraph-877c5fd1-ff4b-443e-ad0e-c02008fcc16c"
+                                style="">
+                                <div class="container">
+                                    <div class="row flex-center mt-0">
+                                        <div class="col-xxl-12 col-xl-12 col-lg-12 px-0">
+                                            <div class="" style="">
+                                                <h4>Online health access on your smartphone</h4>
+                                                <p>Access your health record with the healow<sup>TM</sup> smartphone
+                                                    app. Along with the features you get with our Patient Portal, the
+                                                    healow app can manage multiple accounts (all family members), set
+                                                    medication and appointment reminders, and use trackers to help
+                                                    manage health. The healow app is a secure and convenient way to
+                                                    manage what’s important and puts YOU in control of your health.</p>
+                                                <p>healow is available free on the <a href="https://goo.gl/LhQBBk">Apple
+                                                        app store</a> and <a href="https://goo.gl/vssCoR">Google Play
+                                                        store</a>.</p>
+                                                <p>Download free healow smartphone app</p>
+                                                <p><a href="https://goo.gl/LhQBBk"><img
+                                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/images/app_store_button.png"
+                                                            alt="App Store"></a><a href="https://goo.gl/vssCoR"><img
+                                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/images/play_store_button.png"
+                                                            alt="Play Store"></a></p>
+                                                <p>To learn more about healow, <a href="#">click here</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <div class="col-md-6 col-12  p-1">
+                            <section class="py-5 shadow-sm" id="textparagraph-94858bfe-dec0-4650-9f13-f97ac32af409"
+                                style="">
+                                <div class="container">
+                                    <div class="row flex-center mt-0">
+                                        <div class="col-xxl-12 col-xl-12 col-lg-12 px-0">
+                                            <div class="" style="">
+                                                <p>&nbsp;</p>
+                                                <p>&nbsp;</p>
+                                                <p><img src="https://aware.healow.com/Production/Aware-Website-Assets/V2/images/healow-image.jpg"
+                                                        alt="healow app" style="max-width: -webkit-fill-available;"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="patient-tools" class="container-fluid py-5 tab-block tab-block--healowaware p-2"
+                style="background-color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif; background: #ffffff; color: #2b2d42">
+                <div class="container">
+                    <p class="rcec-eyebrow">Patient tools</p>
+                    <h2 class="rcec-title">Save time before your visit.</h2>
+                    <p class="rcec-lead">
+                        Check in early, fill out forms, and review your visit summary &mdash; all from your phone.
+                    </p>
+                    <div class="tab-block__surface tab-block__surface--healowaware">
+                        <div class="tab-block-nav tab-block-nav--healowaware" role="tablist">
+                            <button type="button" class="tab-block-nav__seg is-active"
+                                data-tab-target="#healowaware-tab-tab-1-48428e4d-efd1-4f7c-88c5-ab505fe49c66-panel"
+                                data-tab-parent="patient-tools" role="tab" aria-selected="true"
+                                aria-controls="healowaware-tab-tab-1-48428e4d-efd1-4f7c-88c5-ab505fe49c66-panel">
+
+                                <span class="tab-block-nav__label">Easy Check-in1</span>
+                            </button>
+                            <button type="button" class="tab-block-nav__seg"
+                                data-tab-target="#healowaware-tab-tab-1-a5a88ce5-eedc-4df4-8949-766e6f9a6d74-panel"
+                                data-tab-parent="patient-tools" role="tab" aria-selected="false"
+                                aria-controls="healowaware-tab-tab-1-a5a88ce5-eedc-4df4-8949-766e6f9a6d74-panel">
+
+                                <span class="tab-block-nav__label">Reminders &amp; Notifications</span>
+                            </button>
+                            <button type="button" class="tab-block-nav__seg"
+                                data-tab-target="#healowaware-tab-tab-2-7802dc3b-be1d-4412-9d58-83302688d5b5-panel"
+                                data-tab-parent="patient-tools" role="tab" aria-selected="false"
+                                aria-controls="healowaware-tab-tab-2-7802dc3b-be1d-4412-9d58-83302688d5b5-panel">
+
+                                <span class="tab-block-nav__label">TeleVisits</span>
+                            </button>
+                            <button type="button" class="tab-block-nav__seg"
+                                data-tab-target="#healowaware-tab-tab-3-a23d926d-3fdd-44db-945d-168373adbeef-panel"
+                                data-tab-parent="patient-tools" role="tab" aria-selected="false"
+                                aria-controls="healowaware-tab-tab-3-a23d926d-3fdd-44db-945d-168373adbeef-panel">
+
+                                <span class="tab-block-nav__label">healow Mom app</span>
+                            </button>
+                            <button type="button" class="tab-block-nav__seg"
+                                data-tab-target="#healowaware-tab-tab-4-287d5271-36c4-4135-9ed1-2ff38db07f0b-panel"
+                                data-tab-parent="patient-tools" role="tab" aria-selected="false"
+                                aria-controls="healowaware-tab-tab-4-287d5271-36c4-4135-9ed1-2ff38db07f0b-panel">
+
+                                <span class="tab-block-nav__label">healow Kids app</span>
+                            </button>
+                        </div>
+                        <div id="healowaware-tab-tab-1-48428e4d-efd1-4f7c-88c5-ab505fe49c66-panel"
+                            class="tab-block-panel tab-block-panel--healowaware is-active"
+                            style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif"
+                            data-tab-panel="patient-tools" role="tabpanel">
+                            <section id="htmlblock-e6c0ddc8-d149-4fcc-a0c3-b81ba78d0f0a"
+                                class="container-fluid py-3 healowaware-html-block" style="">
+                                <div class="container">
+                                    <div class="healowaware-html-content" style="">
+                                        <iframe class="mgdiframe-reminders" id="i-reminders-content"
+                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/reminders.html"
+                                            frameborder="0" scrolling="no" width="100%" height="auto"
+                                            onload="resizeIframe('i-reminders-content')"></iframe>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <div id="healowaware-tab-tab-1-a5a88ce5-eedc-4df4-8949-766e6f9a6d74-panel"
+                            class="tab-block-panel tab-block-panel--healowaware"
+                            style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif"
+                            data-tab-panel="patient-tools" role="tabpanel" hidden>
+                            <section id="htmlblock-7eefb9da-d1d5-4fb7-8551-096e031f16cd"
+                                class="container-fluid py-3 healowaware-html-block" style="">
+                                <div class="container">
+                                    <div class="healowaware-html-content" style="">
+                                        <iframe class="mgdiframe-checkin" id="i-checkin-content"
+                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/kiosk.html"
+                                            frameborder="0" scrolling="no" width="100%" height="100%"
+                                            onload="resizeIframe('i-checkin-content')"></iframe>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <div id="healowaware-tab-tab-2-7802dc3b-be1d-4412-9d58-83302688d5b5-panel"
+                            class="tab-block-panel tab-block-panel--healowaware"
+                            style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif"
+                            data-tab-panel="patient-tools" role="tabpanel" hidden>
+                            <section id="htmlblock-9bbc3f85-eaa6-495d-9fa1-8de403cbf87b"
+                                class="container-fluid py-3 healowaware-html-block" style="">
+                                <div class="container">
+                                    <div class="healowaware-html-content" style="">
+                                        <iframe class="mgdiframe-visits" id="i-virtual-visits"
+                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/televisit.html"
+                                            frameborder="0" scrolling="no" width="100%" height="auto"
+                                            onload="resizeIframe('i-virtual-visits')"></iframe>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <div id="healowaware-tab-tab-3-a23d926d-3fdd-44db-945d-168373adbeef-panel"
+                            class="tab-block-panel tab-block-panel--healowaware"
+                            style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif"
+                            data-tab-panel="patient-tools" role="tabpanel" hidden>
+                            <section id="htmlblock-1b1d3a3e-bd25-4b5a-9f41-eadfb0a89422"
+                                class="container-fluid py-3 healowaware-html-block" style="">
+                                <div class="container">
+                                    <div class="healowaware-html-content" style="">
+                                        <iframe class="mgdiframe-mom" id="i-healow-mom"
+                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/healowmom.html"
+                                            frameborder="0" scrolling="no" width="100%" height="auto"
+                                            onload="resizeIframe('i-healow-mom')"></iframe>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <div id="healowaware-tab-tab-4-287d5271-36c4-4135-9ed1-2ff38db07f0b-panel"
+                            class="tab-block-panel tab-block-panel--healowaware"
+                            style="color: #2b2d42; font-family: &quot;Montserrat&quot;, sans-serif"
+                            data-tab-panel="patient-tools" role="tabpanel" hidden>
+                            <section id="htmlblock-4d28ea8d-49bb-4e27-89c1-a8dc931cf897"
+                                class="container-fluid py-3 healowaware-html-block" style="">
+                                <div class="container">
+                                    <div class="healowaware-html-content" style="">
+                                        <iframe class="mgdiframe-kids" id="i-healow-kids"
+                                            src="https://aware.healow.com/Production/Aware-Website-Assets/V2/healowkids.html"
+                                            frameborder="0" scrolling="no" width="100%" height="auto"
+                                            onload="resizeIframe('i-healow-kids')"></iframe>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                (function () {
+                    var root = document.getElementById("patient-tools");
+                    if (!root) {
+                        return;
+                    }
+                    var buttons = root.querySelectorAll('[data-tab-target]');
+                    if (!buttons.length) {
+                        return;
+                    }
+                    var updateTabs = function (targetId) {
+                        buttons.forEach(function (button) {
+                            var isActive = button.getAttribute('data-tab-target') === targetId;
+                            button.classList.toggle('is-active', isActive);
+                            button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                        });
+                        var panels = root.querySelectorAll('[data-tab-panel]');
+                        panels.forEach(function (panel) {
+                            var panelId = '#' + panel.id;
+                            var isMatch = panelId === targetId;
+                            panel.classList.toggle('is-active', isMatch);
+                            if (isMatch) {
+                                panel.removeAttribute('hidden');
+                            } else {
+                                panel.setAttribute('hidden', 'hidden');
+                            }
+                        });
+                    };
+                    buttons.forEach(function (button) {
+                        button.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            var targetId = button.getAttribute('data-tab-target');
+                            if (!targetId) {
+                                return;
+                            }
+                            updateTabs(targetId);
+                        });
+                    });
+                })();
+            </script>
+            <section id="htmlblock-2131" class="rcec-section rcec-section--white">
+                <style>
+                    #htmlblock-2131 .rcec-steps {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 1.5rem;
+                        margin-top: 1.5rem;
+                    }
+                    #htmlblock-2131 .rcec-step {
+                        position: relative;
+                        padding: 2rem 1.5rem 1.75rem;
+                        background: #fbf9f4;
+                        border: 1px solid rgba(13, 46, 79, 0.06);
+                        border-radius: 14px;
+                    }
+                    #htmlblock-2131 .rcec-step-num {
+                        position: absolute;
+                        top: 1.25rem; right: 1.25rem;
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        line-height: 1;
+                        color: rgba(70, 140, 197, 0.18);
+                    }
+                    #htmlblock-2131 .rcec-step-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 48px; height: 48px;
+                        border-radius: 12px;
+                        background: rgba(70, 140, 197, 0.10);
+                        color: #468cc5;
+                        margin-bottom: 1rem;
+                    }
+                    #htmlblock-2131 .rcec-step-icon .material-icons { font-size: 24px; }
+                    #htmlblock-2131 .rcec-step h5 {
+                        color: #0d2e4f;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        margin: 0 0 0.5rem;
+                    }
+                    #htmlblock-2131 .rcec-step p {
+                        color: #4b5563;
+                        font-size: 0.9rem;
+                        line-height: 1.5;
+                        margin: 0;
+                    }
+                    #htmlblock-2131 .rcec-code-card {
+                        margin-top: 2.5rem;
+                        padding: 1.75rem 2rem;
+                        background: linear-gradient(135deg, #0d2e4f 0%, #1a4a7a 100%);
+                        border-radius: 14px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 1.5rem;
+                    }
+                    #htmlblock-2131 .rcec-code-text {
+                        color: rgba(255,255,255,0.85);
+                        font-size: 0.95rem;
+                        line-height: 1.4;
+                        max-width: 38ch;
+                        margin: 0;
+                    }
+                    #htmlblock-2131 .rcec-code-block {
+                        text-align: center;
+                    }
+                    #htmlblock-2131 .rcec-code-label {
+                        display: block;
+                        color: rgba(255,255,255,0.6);
+                        font-size: 0.7rem;
+                        font-weight: 600;
+                        letter-spacing: 0.18em;
+                        text-transform: uppercase;
+                        margin-bottom: 0.4rem;
+                    }
+                    #htmlblock-2131 .rcec-code-value {
+                        display: inline-block;
+                        padding: 0.65rem 1.5rem;
+                        background: rgba(255,255,255,0.10);
+                        border: 1px solid rgba(255,255,255,0.22);
+                        border-radius: 10px;
+                        color: #ffffff;
+                        font-family: "SFMono-Regular", Menlo, monospace;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        letter-spacing: 0.25em;
+                    }
+                    @media (max-width: 991.98px) {
+                        #htmlblock-2131 .rcec-steps { grid-template-columns: repeat(2, 1fr); }
+                    }
+                    @media (max-width: 575.98px) {
+                        #htmlblock-2131 .rcec-steps { grid-template-columns: 1fr; }
+                        #htmlblock-2131 .rcec-code-card { flex-direction: column; align-items: flex-start; }
+                    }
+                </style>
+
+                <div class="container">
+                    <section id="healow-steps">
+                        <p class="rcec-eyebrow">Set up the app</p>
+                        <h2 class="rcec-title">Four steps to your health on your phone.</h2>
+
+                        <div class="rcec-steps">
+                            <div class="rcec-step">
+                                <span class="rcec-step-num">01</span>
+                                <div class="rcec-step-icon"><i class="material-icons">file_download</i></div>
+                                <h5>Download the app</h5>
+                                <p>Get healow free from the App Store (iPhone) or Google Play (Android).</p>
+                            </div>
+                            <div class="rcec-step">
+                                <span class="rcec-step-num">02</span>
+                                <div class="rcec-step-icon"><i class="material-icons">search</i></div>
+                                <h5>Find our practice</h5>
+                                <p>Search for our practice in the app using the unique code below.</p>
+                            </div>
+                            <div class="rcec-step">
+                                <span class="rcec-step-num">03</span>
+                                <div class="rcec-step-icon"><i class="material-icons">login</i></div>
+                                <h5>Sign in</h5>
+                                <p>Enter your patient portal username and password.</p>
+                            </div>
+                            <div class="rcec-step">
+                                <span class="rcec-step-num">04</span>
+                                <div class="rcec-step-icon"><i class="material-icons">pin</i></div>
+                                <h5>Set your PIN</h5>
+                                <p>Create a PIN to securely access your health record going forward.</p>
+                            </div>
+                        </div>
+
+                        <div class="rcec-code-card">
+                            <p class="rcec-code-text">
+                                Use this unique code in the healow app to find Riverchase Express Clinic.
+                            </p>
+                            <div class="rcec-code-block">
+                                <span class="rcec-code-label">Practice code</span>
+                                <span class="rcec-code-value">CGFBED</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <section class="rcec-section rcec-section--cream" id="faqs">
+                <style>
+                    #faqs .rcec-faq-tabs {
+                        display: inline-flex;
+                        gap: 0.4rem;
+                        padding: 0.3rem;
+                        background: #ffffff;
+                        border: 1px solid rgba(13, 46, 79, 0.08);
+                        border-radius: 999px;
+                        margin-bottom: 2rem;
+                    }
+                    #faqs .rcec-faq-tab {
+                        padding: 0.5rem 1.15rem;
+                        border: 0;
+                        background: transparent;
+                        color: #4b5563;
+                        font-size: 0.88rem;
+                        font-weight: 500;
+                        border-radius: 999px;
+                        cursor: pointer;
+                        transition: background 0.2s ease, color 0.2s ease;
+                    }
+                    #faqs .rcec-faq-tab.is-active {
+                        background: #0d2e4f;
+                        color: #ffffff;
+                    }
+                    #faqs .rcec-faq-tab:not(.is-active):hover { background: rgba(13, 46, 79, 0.05); }
+
+                    #faqs .rcec-faq-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.75rem;
+                    }
+                    #faqs details.rcec-faq {
+                        background: #ffffff;
+                        border: 1px solid rgba(13, 46, 79, 0.08);
+                        border-radius: 10px;
+                        padding: 0;
+                        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+                    }
+                    #faqs details.rcec-faq[open] {
+                        border-color: rgba(70, 140, 197, 0.35);
+                        box-shadow: 0 6px 16px -10px rgba(13, 46, 79, 0.18);
+                    }
+                    #faqs summary.rcec-faq-q {
+                        list-style: none;
+                        cursor: pointer;
+                        padding: 1.1rem 1.4rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        color: #0d2e4f;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        line-height: 1.4;
+                    }
+                    #faqs summary.rcec-faq-q::-webkit-details-marker { display: none; }
+                    #faqs summary.rcec-faq-q::after {
+                        content: "+";
+                        margin-left: auto;
+                        color: #468cc5;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 1;
+                        transition: transform 0.2s ease;
+                    }
+                    #faqs details.rcec-faq[open] summary.rcec-faq-q::after {
+                        content: "−";
+                    }
+                    #faqs .rcec-faq-a {
+                        padding: 0 1.4rem 1.25rem;
+                        color: #4b5563;
+                        font-size: 0.95rem;
+                        line-height: 1.6;
+                    }
+                    #faqs .rcec-faq-a a { color: #468cc5; font-weight: 500; }
+                    #faqs .rcec-faq-group { display: none; }
+                    #faqs .rcec-faq-group.is-active { display: flex; flex-direction: column; gap: 0.75rem; }
+                </style>
+
+                <div class="container">
+                    <p class="rcec-eyebrow">FAQs</p>
+                    <h2 class="rcec-title">Common questions, clear answers.</h2>
+
+                    <div class="rcec-faq-tabs" role="tablist">
+                        <button type="button" class="rcec-faq-tab is-active" data-group="clinic">Clinic visits</button>
+                        <button type="button" class="rcec-faq-tab" data-group="portal">Patient Portal &amp; healow app</button>
+                    </div>
+
+                    <div class="rcec-faq-group is-active" data-group="clinic">
+                        <details class="rcec-faq" open>
+                            <summary class="rcec-faq-q">Do I need an appointment, or can I walk in?</summary>
+                            <div class="rcec-faq-a">
+                                Both work. We welcome walk-ins during open hours (Mon–Sat, 9 AM – 2 PM), and you can also book ahead by phone or through the patient portal. Appointments get priority for the time slot, walk-ins are seen as soon as a provider is available.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">What insurance do you accept?</summary>
+                            <div class="rcec-faq-a">
+                                We accept Medicare, Medicaid, and most major commercial insurance plans. Self-pay is welcome too. If you're unsure, call <a href="tel:2055366019">205-536-6019</a> before your visit and we'll verify your coverage.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">What should I bring to my first visit?</summary>
+                            <div class="rcec-faq-a">
+                                A photo ID, your insurance card, and a list of any medications you currently take (including over-the-counter and supplements). If you've had recent labs or imaging elsewhere, bring those records or have them faxed to us at 1-833-468-5559.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">Do you treat children?</summary>
+                            <div class="rcec-faq-a">
+                                We can see older children for acute walk-in concerns (sore throats, ear infections, sports physicals, etc.). For ongoing pediatric primary care, we recommend a pediatrician. Call ahead if you're not sure whether we're the right fit.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">Can you refill prescriptions?</summary>
+                            <div class="rcec-faq-a">
+                                Yes &mdash; for non-controlled medications and stable patients, we can manage refills as part of an ongoing care relationship. Controlled medications require an in-person visit and follow specific guidelines.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">When should I go to the ER instead?</summary>
+                            <div class="rcec-faq-a">
+                                For chest pain, severe shortness of breath, signs of stroke, serious injuries, or any other true emergency, <strong>call 911</strong> or go directly to the nearest emergency room. We're a clinic, not an emergency department.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="rcec-faq-group" data-group="portal">
+                        <details class="rcec-faq" open>
+                            <summary class="rcec-faq-q">Is online access secure?</summary>
+                            <div class="rcec-faq-a">
+                                Yes. The patient portal and healow app are protected with a username, password, and PIN of your choice, plus SSL encryption between your device and our servers. Your information stays private.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">How do I sign up for the patient portal?</summary>
+                            <div class="rcec-faq-a">
+                                Ask the front desk during your visit and we'll send you a secure invitation by email. You'll set up your username and password from there. If you didn't get an invite or it expired, call us at <a href="tel:2055366019">205-536-6019</a>.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">What is the healow app, and do I need it?</summary>
+                            <div class="rcec-faq-a">
+                                healow is a free smartphone companion to the patient portal. It adds reminders, trackers, and the ability to manage multiple family members in one place. You don't need it &mdash; the web portal works fine on its own &mdash; but most patients find the app more convenient day-to-day.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">What's the practice code for the healow app?</summary>
+                            <div class="rcec-faq-a">
+                                <strong>CGFBED</strong>. Enter that in the healow app's practice search to find Riverchase Express Clinic.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">I forgot my username or password. What do I do?</summary>
+                            <div class="rcec-faq-a">
+                                On the portal login page, click "Trouble Logging In?" to reset your password. If you've also forgotten your username, call us at <a href="tel:2055366019">205-536-6019</a> and we'll help you back in.
+                            </div>
+                        </details>
+                        <details class="rcec-faq">
+                            <summary class="rcec-faq-q">Can I message my provider through the portal?</summary>
+                            <div class="rcec-faq-a">
+                                Yes &mdash; for non-urgent questions, prescription refill requests, or follow-ups. Provider responses typically come within one or two business days. <strong>Do not use messaging for emergencies</strong> &mdash; call 911 or come into the clinic instead.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <script>
+                    (function () {
+                        var tabs = document.querySelectorAll('#faqs .rcec-faq-tab');
+                        var groups = document.querySelectorAll('#faqs .rcec-faq-group');
+                        tabs.forEach(function (t) {
+                            t.addEventListener('click', function () {
+                                var key = t.dataset.group;
+                                tabs.forEach(function (x) { x.classList.toggle('is-active', x === t); });
+                                groups.forEach(function (g) { g.classList.toggle('is-active', g.dataset.group === key); });
+                            });
+                        });
+                    })();
+                </script>
+            </section>
+
+            <script>
+                (function () {
+                    const accordion = document.getElementById('faqs-accordion');
+                    if (!accordion) {
+                        return;
+                    }
+
+                    const updateIconForButton = button => {
+                        if (!button) {
+                            return;
+                        }
+                        const icon = button.querySelector('.faq-toggle-icon');
+                        if (!icon) {
+                            return;
+                        }
+                        icon.textContent = button.classList.contains('collapsed') ? 'expand_less' :
+                            'expand_more';
+                    };
+
+                    const buttons = accordion.querySelectorAll('.faq-link');
+                    buttons.forEach(updateIconForButton);
+
+                    const resolveButtonForCollapse = collapseEl => {
+                        if (!collapseEl || !collapseEl.id) {
+                            return null;
+                        }
+                        return accordion.querySelector('[data-target="#' + collapseEl.id + '"]');
+                    };
+
+                    accordion.addEventListener('shown.bs.collapse', event => {
+                        updateIconForButton(resolveButtonForCollapse(event.target));
+                    });
+
+                    accordion.addEventListener('hidden.bs.collapse', event => {
+                        updateIconForButton(resolveButtonForCollapse(event.target));
+                    });
+
+                    accordion.addEventListener('click', event => {
+                        const button = event.target.closest('.faq-link');
+                        if (!button) {
+                            return;
+                        }
+                        requestAnimationFrame(() => updateIconForButton(button));
+                    });
+                })();
+            </script>
+
+            <footer class="healowaware-footer"
+                style="background-color: #468cc5; font-family: &quot;Montserrat&quot;, sans-serif; background: #468cc5; color: #ffffff">
+                <div class="container healowaware-footer-container" style="">
+                    <div class="row gy-4 align-items-start">
+                        <div class="col-md-4 healowaware-footer-column">
+                            <span class="d-block mb-2 column-heading" style="font-size: 1rem; font-weight: 600">Quick
+                                Links</span>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"
+                                    style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                    <a href="#Location-details"
+                                        style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                        Location Details
+                                    </a>
+                                </li>
+                                <li class="mb-2"
+                                    style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                    <a href="#services-bx"
+                                        style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="mb-2"
+                                    style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                    <a href="#patient-portal"
+                                        style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                        Patient Portal
+                                    </a>
+                                </li>
+                                <li class="mb-2"
+                                    style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                    <a href="#health-access"
+                                        style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                        Helow Access
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 healowaware-footer-column">
+
+                        </div>
+                        <div class="col-md-4 healowaware-footer-column">
+                            <div class="healowaware-footer-block rounded-3"
+                                style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                <span class="d-block mb-2 column-heading"
+                                    style="font-size: 1rem; font-weight: 600">Contact</span>
+                                <p class="mb-2" style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                    <strong>Riverchase Express Clinic</strong><br />
+                                    3075 John Hawkins Pkwy, Suite G, Hoover, AL 35244<br />
+                                    <a href="tel:2055366019"
+                                        style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">205-536-6019</a><br />
+                                    <a href="mailto:riverchaseexpressclinic@gmail.com"
+                                        style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">riverchaseexpressclinic@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 align-items-center">
+                        <div class="col-md-12 d-flex flex-column flex-md-row justify-content-md-between align-items-md-center gap-3 healowaware-footer-meta"
+                            style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                            <small class="healowaware-footer-note"
+                                style="color: #ffffff; font-family: &quot;Montserrat&quot;, sans-serif">
+                                Copyright 2026 healow. All rights reserved.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap-4.0.0.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owlcarousel/owl.carousel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.DS_Store
+*.bak
+*.bak[0-9]
+node_modules/
+.vscode/
+.idea/
+*.log
+.aki/

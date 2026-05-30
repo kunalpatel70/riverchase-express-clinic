@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS styles for practice custom branding*/
+
+.nav-background-color{
+	background: #fff;
+}
+
+
+#header-navbar li .sep{
+	background: #000; width: 1px; display: block;  height: 15px; margin:13px 15px;}
+
+
+#primary-nav .navbar-brand-color{
+	color: #4f4f4f;
+}
+
+#primary-nav .navbar-brand{
+	color: #468cc5;
+	
+}
+
+a {color: #468cc5 !important; text-decoration: none;}
+a:hover, a:visited {color: #000;}
+
+a.link-underline {text-decoration: underline;}
+a.link-underline:hover, a.link-underline:visited {text-decoration: none;}
+
+
+.material-icons.custom-material-style { font-size: 22px; color: #468cc5; }
+#imp-notice .material-icons { font-size: 22px; color: #df2f3b;}
+ion-icon {
+  font-size: 52px;
+	color: #c4c4c4;
+
+}
+
+/** style for quick action button on top bar**/
+#quick-action .btn {
+	border: 1px solid #dddddd;
+	background: #fff;
+
+}
+#quick-action .btn:hover, #quick-action .btn:focus, #quick-action .btn:active {
+	background-color: #f3f3f3;	
+	border-color: #7698ba;	
+	color: #000;
+}
+
+/** style for hero background**/
+#hero-section, #hero-section .d-flex {
+	background: #7698ba;
+	color: #000;
+	
+}
+
+#imp-notice {
+	background: #dddddd;
+	color: #000;
+	
+}
+
+.local-panel{
+	border: 1px solid #dadada;
+	
+	
+}
+
+#local-meet-doctors .material-icons { font-size: 22px; color: #468cc5;  }
+#cta-call-email  small{font-size: 100% !important;}
+#cta-call-email .cta-material-icons {font-size: 22px; color: #999 !important; border: 1px solid red;}
+
+#local-socials a ion-icon {color:#468cc5;}
+#local-socials a:hover ion-icon {color:#666;}
+
+#insurance-nearby-location .insurance-border {border-right:1px solid #c4c4c4;}
+#insurance-nearby-location  {background:#cccccc;}
+
+
+#video-slider {background: #f4f4f4; }
+
+#video-slider .carousel-indicators .active, #testimonials .carousel-indicators .active { background-color: #468cc5;}
+#video-slider .carousel-indicators li, #testimonials .carousel-indicators li { background-color: #666;}
+
+
+#gallery-slider .carousel-indicators .active {background-color: #468cc5;}
+#gallery-slider .carousel-indicators li { background-color: #666;}
+
+#testimonials {background: #f4f4f4;}
+#testimonials .testimonial-name {color: #000;}
+#testimonials .testimonial-designation {color: #666;}
+
+.star {
+	color: #ff0000;
+}
+
+.star-grey {
+	color: #666;
+}
+
+
+.card.stores-cta .card-body {
+    
+	background: #f4f4f4;
+}
+
+.services-tabs a.nav-link {color: #000;}
+
+
+#patient-tools .patient-tools-tab #p-tools-Content{background:#f3f3f3; }
+
+#patient-tools .nav-tabs .nav-link .active, #patient-tools .nav-tabs .nav-tabs .nav-link.active{
+    color: #495057;
+    background-color: #ececec;
+    border-color: none !important;
+}
+
+.material-icons.star { color: #7698ba; }
+.material-icons.star-grey{ color: #ababab !important; }
+
+
+
+#faqs a.faq-link {color: #468cc5; text-decoration: none !important;}
+
+#faqs a.faq-link:hover {color: #000; text-decoration: none !important;}
+
+#footer .list-group-item{background-color:rgba(0,0,0,0);  }
+
+#footer {
+	background: #7698ba;
+	color: #fff;
+}
+
+.footer-link li a, .footer-link li a:visited{color: #fff !important;}
+.footer-link li a:hover{color: #ccc !important; text-decoration: none !important;}
+
+.custom-link-light, .custom-link-light:active{color: #ccc !important;}
+
+.custom-link-light:hover {color: #fff !important; text-decoration: none !important;}
+
+.btn-modal-custom {color: #fff;background-color: #4ec3e0; border-color: #4ec3e0;}

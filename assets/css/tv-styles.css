@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	font-size: 1.15rem;
+}
+
+
+#header-section {
+	
+	background-color: #CFCDD0;
+		/**background-size: contain;**/
+	
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 116px;
+
+}
+
+#header-section .container {
+	text-align: center;
+}
+
+
+#header-section .container img {
+	margin: 0 auto;
+}
+
+#wrapper {
+	margin-bottom: 50px;
+}
+
+h1.display-4 {
+	font-size: 40px;
+	font-weight: 500;
+}
+
+.h2-subheading{
+	font-size: 24px;
+	line-height: 34px;
+}
+
+
+.tagline{
+	font-size: 24px;
+	font-weight: 400;
+}
+
+p.lead{
+	font-size: 20px;
+	color: #000000;
+	line-height: 150%;
+	font-weight: 400;
+	margin: 35px 0;
+		
+}
+
+
+p {color: #737B83;}
+
+
+#three-steps .card {
+		margin-right: 15px !important;
+	margin-left: 0px !important;
+	margin-top: 15px !important;
+}
+
+
+.card {
+	border:0px;
+
+}
+.card-body {
+	padding: 1.25rem .25rem;
+}
+
+.card-title {
+	font-weight: normal;
+}
+
+.videobox {
+	background-color: #F9FAF9;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+	border:1px solid #E5E5E5;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+#apptDay ul {
+	padding-left: 20px;
+	
+}
+
+#apptDay ul li{
+	margin-bottom:15px;
+	margin-top: 15px;
+	color: #737B83;
+	font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+#healowAppBox {
+	background: #DAEAF1;
+	overflow: hidden;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+
+#healowAppBox .card-header{
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	
+}
+
+#healowAppBox .card-body {padding: 1.25rem;
+}
+
+
+
+
+/** Medium devices (tablets, 768px and up)**/
+@media (min-width: 768px) { 
+	
+	
+
+	
+	p.lead{
+	font-size: 26px;
+	color: #000000;
+	line-height: 150%;
+	font-weight: 400;
+	margin: 35px 0;
+		
+}
+
+
+
+
+}
+
+
+/** Large devices (desktops, 992px and up)**/
+@media (min-width: 992px) {
+	
+	
+	
+}
+
