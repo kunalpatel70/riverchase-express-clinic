@@ -1,13 +1,8 @@
 # Riverchase Express Clinic
 
-Static marketing site for Riverchase Express Clinic in Hoover, AL.
+Static marketing site for Riverchase Express Clinic, an independent CRNP-led primary and minute-care practice in Hoover, AL.
 
-- **Provider**: Niki Patel, CRNP, FNP-BC
-- **Phone**: 205-536-6019
-- **Address**: 3075 John Hawkins Pkwy, Suite G, Hoover, AL 35244
-
-Single-file static site (`index.html` + `assets/`). No build step.
-Hosted on AWS Amplify, auto-deployed from `main`.
+Single-file static site (`index.html` + `assets/`). No build step, no framework dependencies — vanilla HTML, CSS, and a small amount of JS. Hosted on AWS Amplify with auto-deploy from `main`.
 
 ## Local preview
 
