@@ -28,7 +28,7 @@
     <meta property="og:title" content="Riverchase Express Clinic | Walk-in Primary &amp; Minute Care in Hoover, AL">
     <meta property="og:description" content="CRNP-led primary and walk-in care in Hoover, AL. Same-day visits, six days a week. Most insurance accepted.">
     <meta property="og:url" content="https://riverchaseexpressclinic.com/">
-    <meta property="og:image" content="https://riverchaseexpressclinic.com/assets/img/20260302_063854.jpg">
+    <meta property="og:image" content="https://riverchaseexpressclinic.com/assets/img/clinic-exam-room.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Inside Riverchase Express Clinic in Hoover, AL">
@@ -38,7 +38,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Riverchase Express Clinic | Hoover, AL">
     <meta name="twitter:description" content="CRNP-led primary and walk-in care in Hoover, AL. Same-day visits, six days a week.">
-    <meta name="twitter:image" content="https://riverchaseexpressclinic.com/assets/img/20260302_063854.jpg">
+    <meta name="twitter:image" content="https://riverchaseexpressclinic.com/assets/img/clinic-exam-room.jpg">
 
     <!-- Structured data: MedicalClinic -->
     <script type="application/ld+json">
@@ -50,7 +50,7 @@
       "description": "CRNP-led primary and walk-in care clinic in Hoover, Alabama. Treats acute illness, manages chronic conditions, and offers wellness visits.",
       "url": "https://riverchaseexpressclinic.com/",
       "logo": "https://riverchaseexpressclinic.com/assets/img/logo.png",
-      "image": "https://riverchaseexpressclinic.com/assets/img/20260302_063854.jpg",
+      "image": "https://riverchaseexpressclinic.com/assets/img/clinic-exam-room.jpg",
       "telephone": "+1-205-536-6019",
       "faxNumber": "+1-833-468-5559",
       "email": "riverchaseexpressclinic@gmail.com",
@@ -313,8 +313,48 @@
                 #primary-nav .nav-link:focus::after,
                 #primary-nav .nav-link.is-active::after { transform: scaleX(1); }
 
+                /* Sister-brand pharmacy callout — pill in nav */
+                #primary-nav .nav-item-pharmacy { margin-left: 0.75rem; }
+                #primary-nav .btn-pharmacy {
+                    display: inline-flex; align-items: center; gap: 0.4rem;
+                    padding: 0.45rem 0.95rem 0.45rem 0.8rem;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 0.92rem; font-weight: 600;
+                    letter-spacing: 0.01em;
+                    color: #5fa389;
+                    background: rgba(112,182,155,0.08);
+                    border: 1.5px solid rgba(112,182,155,0.4);
+                    border-radius: 999px;
+                    text-decoration: none;
+                    line-height: 1;
+                    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+                }
+                #primary-nav .btn-pharmacy .pharma-icon { font-size: 18px; color: #70b69b; transition: color 0.2s ease; }
+                #primary-nav .btn-pharmacy .ext-icon { font-size: 13px; opacity: 0.7; transition: transform 0.2s ease, opacity 0.2s ease; }
+                #primary-nav .nav-cta-divider {
+                    width: 1px; height: 26px;
+                    background: rgba(15,23,42,0.12);
+                    margin: 0 0.1rem 0 -0.25rem;
+                    align-self: center;
+                }
+                @media (max-width: 991.98px) {
+                    #primary-nav .nav-cta-divider { display: none; }
+                }
+                #primary-nav .btn-pharmacy:hover,
+                #primary-nav .btn-pharmacy:focus {
+                    background: #70b69b;
+                    color: #ffffff;
+                    border-color: #70b69b;
+                    box-shadow: 0 6px 14px -8px rgba(112,182,155,0.5);
+                    transform: translateY(-1px);
+                }
+                #primary-nav .btn-pharmacy:hover .pharma-icon,
+                #primary-nav .btn-pharmacy:focus .pharma-icon { color: #ffffff; }
+                #primary-nav .btn-pharmacy:hover .ext-icon,
+                #primary-nav .btn-pharmacy:focus .ext-icon { transform: translate(1px, -1px); opacity: 1; }
+
                 /* CTA cluster */
-                #primary-nav .nav-cta { display: flex; align-items: center; gap: 0.75rem; margin-left: 1.25rem; }
+                #primary-nav .nav-cta { display: flex; align-items: center; gap: 0.75rem; margin-left: 0.5rem; }
                 #primary-nav .nav-call {
                     display: inline-flex; align-items: center; gap: 0.4rem;
                     color: #2b2d42; text-decoration: none; font-weight: 600; font-size: 0.93rem;
@@ -364,6 +404,7 @@
                     #primary-nav .nav-link { margin: 0; padding: 0.65rem 0 !important; }
                     #primary-nav .nav-link::after { display: none; }
                     #primary-nav .nav-cta { margin: 0.75rem 0 0; flex-wrap: wrap; }
+                    #primary-nav .nav-item-pharmacy { margin: 0.5rem 0 0 0; }
                 }
 
                 /* Make anchor jumps not hide under fixed nav */
@@ -388,9 +429,19 @@
                             <li class="nav-item"><a class="nav-link" href="#services-bx">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="#patient-tools">Patient Tools</a></li>
                             <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                            <li class="nav-item nav-item-pharmacy">
+                                <a class="btn-pharmacy" href="https://riverchasepharmacy.com"
+                                   target="_blank" rel="noopener noreferrer"
+                                   aria-label="Visit Riverchase Pharmacy (opens in new tab)">
+                                    <i class="material-icons pharma-icon" aria-hidden="true">local_pharmacy</i>
+                                    <span>Pharmacy</span>
+                                    <i class="material-icons ext-icon" aria-hidden="true">north_east</i>
+                                </a>
+                            </li>
                         </ul>
 
                         <div class="nav-cta">
+                            <span class="nav-cta-divider" aria-hidden="true"></span>
                             <a class="nav-call" href="tel:2055366019" aria-label="Call 205-536-6019">
                                 <i class="material-icons" aria-hidden="true">call</i>
                                 <span>205-536-6019</span>
@@ -821,19 +872,126 @@
                             </section>
 
                             <style>
+                                .healowaware-gallery-slide {
+                                    padding: 0 0 1.5rem !important;
+                                }
                                 .healowaware-gallery-image {
                                     position: relative;
                                     overflow: hidden;
+                                    background: #ffffff;
+                                    border: 1px solid #e5e7eb;
+                                    border-radius: 14px;
+                                    padding: 14px 14px 14px;
+                                    box-shadow: 0 24px 44px -28px rgba(13, 46, 79, 0.32),
+                                                0 2px 6px rgba(13, 46, 79, 0.04);
+                                    aspect-ratio: 4 / 3;
+                                    transition: transform 0.25s ease, box-shadow 0.25s ease;
+                                    cursor: zoom-in;
                                 }
-
+                                .healowaware-gallery-image::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: -8px;
+                                    left: -8px;
+                                    width: 38px;
+                                    height: 38px;
+                                    border-top: 2px solid #70b69b;
+                                    border-left: 2px solid #70b69b;
+                                    border-top-left-radius: 14px;
+                                    z-index: 3;
+                                    pointer-events: none;
+                                }
+                                .healowaware-gallery-image::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: -8px;
+                                    right: -8px;
+                                    width: 38px;
+                                    height: 38px;
+                                    border-bottom: 2px solid #70b69b;
+                                    border-right: 2px solid #70b69b;
+                                    border-bottom-right-radius: 14px;
+                                    z-index: 3;
+                                    pointer-events: none;
+                                }
                                 .healowaware-gallery-image img {
-                                    object-fit: cover;
+                                    width: 100%;
                                     height: 100%;
-                                    transition: transform 0.35s ease;
+                                    object-fit: cover;
+                                    object-position: center center;
+                                    border-radius: 6px;
+                                    transition: transform 0.5s ease;
+                                    display: block;
                                 }
-
+                                /* Per-photo focal-point tuning */
+                                .healowaware-gallery-image[data-index="1"] img {
+                                    object-position: left center;
+                                }
+                                .healowaware-gallery-image[data-index="2"] img {
+                                    object-position: center 75%;
+                                }
+                                .healowaware-gallery-image:hover {
+                                    transform: translateY(-3px);
+                                    box-shadow: 0 30px 56px -30px rgba(13, 46, 79, 0.42),
+                                                0 2px 6px rgba(13, 46, 79, 0.04);
+                                }
                                 .healowaware-gallery-image:hover img {
-                                    transform: scale(1.04);
+                                    transform: scale(1.03);
+                                }
+                                /* Owl carousel dots */
+                                .healowaware-gallery-carousel-wrapper .owl-dots {
+                                    text-align: center;
+                                    margin-top: 1rem;
+                                }
+                                .healowaware-gallery-carousel-wrapper .owl-dot {
+                                    width: 8px;
+                                    height: 8px;
+                                    margin: 0 5px;
+                                    border-radius: 50%;
+                                    background: #d1d5db !important;
+                                    border: 0;
+                                    transition: background 0.2s ease, width 0.2s ease;
+                                }
+                                .healowaware-gallery-carousel-wrapper .owl-dot.active {
+                                    background: #70b69b !important;
+                                    width: 22px;
+                                    border-radius: 4px;
+                                }
+                                /* Prev/next buttons */
+                                .healowaware-gallery-carousel-wrapper .carousel-control-prev,
+                                .healowaware-gallery-carousel-wrapper .carousel-control-next {
+                                    width: 40px;
+                                    height: 40px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    background: #ffffff;
+                                    border-radius: 50%;
+                                    box-shadow: 0 6px 16px -6px rgba(13, 46, 79, 0.30);
+                                    opacity: 0.92;
+                                    transition: opacity 0.2s ease, transform 0.2s ease;
+                                }
+                                .healowaware-gallery-carousel-wrapper .carousel-control-prev { left: -8px; }
+                                .healowaware-gallery-carousel-wrapper .carousel-control-next { right: -8px; }
+                                .healowaware-gallery-carousel-wrapper .carousel-control-prev:hover,
+                                .healowaware-gallery-carousel-wrapper .carousel-control-next:hover {
+                                    opacity: 1;
+                                    transform: translateY(-50%) scale(1.05);
+                                }
+                                .healowaware-gallery-carousel-wrapper .carousel-control-prev-icon,
+                                .healowaware-gallery-carousel-wrapper .carousel-control-next-icon {
+                                    filter: invert(15%) sepia(88%) saturate(2154%) hue-rotate(199deg) brightness(0.6);
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                @media (max-width: 575px) {
+                                    .healowaware-gallery-image {
+                                        padding: 10px;
+                                        border-radius: 12px;
+                                    }
+                                    .healowaware-gallery-image::before,
+                                    .healowaware-gallery-image::after {
+                                        display: none;
+                                    }
                                 }
 
                                 .healowaware-lightbox-backdrop {
@@ -930,7 +1088,7 @@
                                     <div class="row align-items-center ">
                                         <div class="col-lg-12 px-0">
                                             <p class="rcec-eyebrow">Our space</p>
-                                            <h3 class="rcec-title rcec-title--sm">Inside the clinic.</h3>
+                                            <h3 class="rcec-title rcec-title--sm">A look around.</h3>
                                             <div class="images-video-tabs">
                                                 <div class="tab-content" id="practice-gallery-tab-content">
                                                     <div class="tab-pane fade show active" id="practice-images-gallery"
@@ -940,15 +1098,15 @@
                                                                 class="healowaware-gallery-carousel-wrapper position-relative">
                                                                 <div id="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
                                                                     class="owl-carousel healowaware-gallery-carousel js-hw-owl-carousel"
-                                                                    data-hw-owl-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":6000,"autoplayHoverPause":true,"smartSpeed":500,"autoHeight":true,"nav":false,"dots":false,"responsiveClass":true,"responsive":{"0":{"items":1,"margin":16},"768":{"items":2,"margin":24},"1200":{"items":2,"margin":32}}}'>
+                                                                    data-hw-owl-options='{"items":1,"loop":true,"autoplay":true,"autoplayTimeout":6500,"autoplayHoverPause":true,"smartSpeed":600,"autoHeight":false,"nav":false,"dots":true,"margin":0}'>
                                                                     <div
                                                                         class="healowaware-gallery-slide py-2 d-flex justify-content-center">
                                                                         <button type="button"
                                                                             class="w-100 healowaware-gallery-image border-0 p-0 bg-transparent gallery-lightbox-trigger"
                                                                             data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
                                                                             data-index="0">
-                                                                            <img src="assets/img/20260302_063555.jpg"
-                                                                                alt="Image 1" class="img-fluid w-100"
+                                                                            <img src="assets/img/clinic-entrance.jpg"
+                                                                                alt="Riverchase Express Clinic entrance and signage" class="img-fluid w-100"
                                                                                 loading="lazy"
                                                                                 onerror="this.onerror=null;this.src='assets/img/defaultImage.jpg';">
                                                                         </button>
@@ -959,8 +1117,8 @@
                                                                             class="w-100 healowaware-gallery-image border-0 p-0 bg-transparent gallery-lightbox-trigger"
                                                                             data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
                                                                             data-index="1">
-                                                                            <img src="assets/img/20260302_063603.jpg"
-                                                                                alt="Image" class="img-fluid w-100"
+                                                                            <img src="assets/img/clinic-exam-room.jpg"
+                                                                                alt="Examination room at Riverchase Express Clinic" class="img-fluid w-100"
                                                                                 loading="lazy"
                                                                                 onerror="this.onerror=null;this.src='assets/img/defaultImage.jpg';">
                                                                         </button>
@@ -971,8 +1129,8 @@
                                                                             class="w-100 healowaware-gallery-image border-0 p-0 bg-transparent gallery-lightbox-trigger"
                                                                             data-gallery="healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
                                                                             data-index="2">
-                                                                            <img src="assets/img/20260302_063854.jpg"
-                                                                                alt="Image" class="img-fluid w-100"
+                                                                            <img src="assets/img/clinic-desk.jpg"
+                                                                                alt="Stethoscope and notepad on the provider's desk" class="img-fluid w-100"
                                                                                 loading="lazy"
                                                                                 onerror="this.onerror=null;this.src='assets/img/defaultImage.jpg';">
                                                                         </button>
@@ -991,21 +1149,6 @@
                                                                         aria-hidden="true"></span>
 
                                                                 </button>
-                                                                <div class="carousel-indicators">
-                                                                    <button type="button"
-                                                                        data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
-                                                                        data-hw-owl-slide="0" class="active"
-                                                                        aria-label="Slide 1"
-                                                                        aria-current="true"></button>
-                                                                    <button type="button"
-                                                                        data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
-                                                                        data-hw-owl-slide="1" class=""
-                                                                        aria-label="Slide 2"></button>
-                                                                    <button type="button"
-                                                                        data-hw-owl-target="#healowaware-gallery-carousel-e5eea566-4877-4738-adf8-68b1fe63a206"
-                                                                        data-hw-owl-slide="2" class=""
-                                                                        aria-label="Slide 3"></button>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1042,16 +1185,16 @@
                                     );
                                     var images = [{
                                         "id": 1,
-                                        "src": "assets/img/20260302_063555.jpg",
-                                        "alt": "Image 1"
+                                        "src": "assets/img/clinic-entrance.jpg",
+                                        "alt": "Riverchase Express Clinic entrance and signage"
                                     }, {
                                         "id": "3c0b8ca4-ab2b-46fa-aa2a-590dc11d574f",
-                                        "src": "assets/img/20260302_063603.jpg",
-                                        "alt": "Image"
+                                        "src": "assets/img/clinic-exam-room.jpg",
+                                        "alt": "Examination room at Riverchase Express Clinic"
                                     }, {
                                         "id": "e0f24275-b017-48fd-8d8c-b107681baaf5",
-                                        "src": "assets/img/20260302_063854.jpg",
-                                        "alt": "Image"
+                                        "src": "assets/img/clinic-desk.jpg",
+                                        "alt": "Stethoscope and notepad on the provider's desk"
                                     }];
                                     var currentIndex = 0;
 
@@ -1601,7 +1744,6 @@
                             <ul class="service-list">
                                 <li>Eczema &amp; contact dermatitis</li>
                                 <li>Acne treatment</li>
-                                <li>Wart treatment</li>
                                 <li>Fungal infections (ringworm, athlete&rsquo;s foot)</li>
                                 <li>Insect bites &amp; allergic skin reactions</li>
                             </ul>
@@ -1623,7 +1765,7 @@
                             <h5>Women&rsquo;s Health</h5>
                             <ul class="service-list">
                                 <li>Birth control counseling &amp; prescriptions</li>
-                                <li>STI testing &amp; treatment</li>
+                                <li>Basic STI testing &amp; treatment</li>
                                 <li>Vaginitis (yeast, BV)</li>
                                 <li>Pregnancy testing</li>
                             </ul>
@@ -1633,7 +1775,6 @@
                             <h5>Occupational &amp; Convenience</h5>
                             <ul class="service-list">
                                 <li>Pre-employment physicals</li>
-                                <li>Drug screening</li>
                                 <li>Return-to-work evaluations</li>
                                 <li>Basic travel medicine consults</li>
                                 <li>Work &amp; school notes</li>
